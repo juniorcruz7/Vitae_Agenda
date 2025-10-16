@@ -1,95 +1,145 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
 
 using namespace std;
 
 class Agenda {
 public:
 
-    //Definindo onde será armazenado a disponibilidade por dia e mes (6 horários disponiveis)
     vector<string> agenda[12][30];
-
-    //Registrando os horários disponiveis por dia
     vector<string> disponibilidade = {"Disponivel", "Disponivel", "Disponivel", "Disponivel", "Disponivel", "Disponivel"};
-
-    //Definindo os horários (fixos)
     vector<string> horas = {"12:00 as 13:00", "13:00 as 14:00", "14:00 as 15:00", "15:00 as 16:00", "16:00 as 17:00", "17:00 as 18:00"};
 
-    //Definindo tudo como disponivel/Chamar pra usar horarios
+    // Inicializa tudo como disponível
     void atribuicao_padrao() {
-
         for (int m = 0; m < 12; m++) {
             for (int d = 0; d < 30; d++) {
-                agenda[m][d] = {"Disponivel", "Disponivel", "Disponivel", "Disponivel", "Disponivel", "Disponivel"};
+                agenda[m][d] = disponibilidade;
             }
         }
     }
 
-    //1 ou 2 pra marcar
-    void horarios(int i_m, int i_d) {
+    // =====================
+    // SALVAR EM ARQUIVO
+    // =====================
+    void salvar_em_arquivo() {
+        ofstream arquivo("agenda.txt");
+        if (!arquivo.is_open()) {
+            cout << "Erro ao abrir arquivo para salvar!\n";
+            return;
+        }
 
-        //Definindo as váriaveis que serão fornecidas pelo usuário
+        for (int m = 0; m < 12; m++) {
+            for (int d = 0; d < 30; d++) {
+                arquivo << "Mes " << (m + 1) << " Dia " << (d + 1) << " ";
+                for (int h = 0; h < 6; h++) {
+                    arquivo << agenda[m][d][h];
+                    if (h < 5) arquivo << ",";
+                }
+                arquivo << "\n";
+            }
+        }
+
+        arquivo.close();
+    }
+
+    // =====================
+    // CARREGAR DE ARQUIVO
+    // =====================
+    void carregar_de_arquivo() {
+        ifstream arquivo("agenda.txt");
+        if (!arquivo.is_open()) {
+            // Se não existir o arquivo ainda, cria um do zero
+            atribuicao_padrao();
+            salvar_em_arquivo();
+            return;
+        }
+
+        string lixo;
+        int m, d;
+        while (arquivo >> lixo >> m >> lixo >> d) {
+            string linha;
+            getline(arquivo, linha); // lê o resto da linha com os status
+
+            vector<string> estados;
+            string atual = "";
+            for (char c : linha) {
+                if (c == ',' || c == ' ') {
+                    if (!atual.empty()) {
+                        estados.push_back(atual);
+                        atual.clear();
+                    }
+                } else {
+                    atual += c;
+                }
+            }
+            if (!atual.empty()) estados.push_back(atual);
+
+            if (estados.size() == 6)
+                agenda[m - 1][d - 1] = estados;
+        }
+
+        arquivo.close();
+    }
+
+    // Mostrar e alterar horários
+    void horarios(int i_m, int i_d) {
         int indice_mes = i_m - 1;
         int indice_dia = i_d - 1;
 
-        //Por motivos práticos, definirei todos os horários como disponiveis (deve ser implementado com o fstream os indisponiveis)
-        for (int c = 0; c < 6; c++) {
-            agenda[indice_mes][indice_dia][c] = disponibilidade[c];
-        }
-
-        cout << "Horarios disponiveis:\n";
+        cout << "\nHorarios de " << i_d << "/" << i_m << ":\n";
         for (int i = 0; i < 6; i++) {
-            cout << horas[i] << ": " << agenda[indice_mes][indice_dia][i] << "\n";
+            cout << "[" << i + 1 << "] " << horas[i] << ": " << agenda[indice_mes][indice_dia][i] << "\n";
         }
-        cout << "\n"; //Linha vazia pra organização
 
         int alterar;
-        string disponivel;
-
-        cout << "Digite o numero referente ao horario que voce quer alterar:\n";
-        cout << "[1] 12:00 as 13:00:\n";
-        cout << "[2] 13:00 as 14:00:\n";
-        cout << "[3] 14:00 as 15:00:\n";
-        cout << "[4] 15:00 as 16:00:\n";
-        cout << "[5] 16:00 as 17:00:\n";
-        cout << "[6] 17:00 as 18:00:\n";
+        cout << "\nDigite o número do horário que deseja alterar: ";
         cin >> alterar;
+        alterar--;
 
-        alterar = alterar - 1;
+        if (alterar < 0 || alterar >= 6) {
+            cout << "Horário inválido!\n";
+            return;
+        }
+
         int marcar;
-
-        cout << "Digite o numero referente a disponibilidade que voce quer deixar:\n";
-        cout << "[1] Deixar disponivel\n";
-        cout << "[2] Deixar indisponivel\n";
+        cout << "Digite o número referente à disponibilidade:\n";
+        cout << "[1] Disponivel\n[2] Indisponivel\n";
         cin >> marcar;
 
-        if (marcar == 1) {
-            disponivel = "Disponivel";
-        }
-        else {
-            disponivel = "Indisponivel";
-        }
+        if (marcar == 1)
+            agenda[indice_mes][indice_dia][alterar] = "Disponivel";
+        else
+            agenda[indice_mes][indice_dia][alterar] = "Indisponivel";
 
-        agenda[indice_mes][indice_dia][alterar] = disponivel;
+        // Mostrar resultado atualizado
+        cout << "\nStatus atualizado:\n";
         for (int i = 0; i < 6; i++) {
             cout << horas[i] << ": " << agenda[indice_mes][indice_dia][i] << "\n";
         }
+
+        // Grava tudo no arquivo
+        salvar_em_arquivo();
+        cout << "\nAlterações salvas em 'agenda.txt' ✅\n";
     }
 };
 
-//Aqui deve pedir o mês, o dia
+// ===========================================================
+// PROGRAMA PRINCIPAL
+// ===========================================================
 int main() {
-
-    int mes,dia;
-
-    cout << "Digite o mes que voce quer ver (1 a 12):\n";
-    cin >> mes;
-    cout << "Digite o dia que voce quer ver (1 a 30):\n";
-    cin >> dia;
+    int mes, dia;
 
     Agenda quinze;
-    quinze.atribuicao_padrao();
+    quinze.carregar_de_arquivo(); // agora carrega o arquivo existente
+
+    cout << "Digite o mês que deseja ver (1 a 12): ";
+    cin >> mes;
+    cout << "Digite o dia que deseja ver (1 a 30): ";
+    cin >> dia;
+
     quinze.horarios(mes, dia);
 
     return 0;

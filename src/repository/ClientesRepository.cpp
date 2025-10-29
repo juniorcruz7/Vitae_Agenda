@@ -1,4 +1,5 @@
 #include "include/repository/ClientesRepository.h"
+#include "include/model/ClientesModel.h"
 #include <fstream>
 #include <sstream>
 

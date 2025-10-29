@@ -1,13 +1,19 @@
 #include "include/view/TelaClientes.h"
-#include "src/view/TelaInicial.cpp"
+#include "include/view/TelaInicial.h"
+#include "include/controller/ClientesController.h"
+#include "include/model/ClientesModel.h"
 #include <iostream>
+#include <string>
+#include <vector>
 
 using namespace std;
+
+ClientesController controlador;
 
 void TelaClientes::exibirMenu() {
     int op;
     TelaInicial tela;
-
+    
     do {
         system("cls");
 
@@ -24,9 +30,9 @@ void TelaClientes::exibirMenu() {
         switch (op)
         {
         case 1:
-            //Cadastrar
+            telaCadastro();
         case 2:
-            //Listar
+            telaListagem();
         case 3:
             //Editar
         case 4:
@@ -36,4 +42,24 @@ void TelaClientes::exibirMenu() {
         }
 
     } while (op =! 0);
+}
+
+void TelaClientes::telaCadastro() {
+    string nome, cpf;
+
+    system("cls");
+    cout << "----- CADASTRO DE CLIENTES -----\n\n";
+    cout << "Digite o nome do cliente: \n";
+    getline(cin,nome);
+    cout << "Digite o CPF do cliente: \n";
+    getline(cin,cpf);
+    
+    controlador.cadastrarCliente(nome,cpf);
+}
+
+void TelaClientes::telaListagem() {
+    vector <ClientesModel> vetor = controlador.listarCliente();
+    for (const auto& lista : vetor) {
+        cout << "ID: " << lista.pegarId() << ", Nome: " << lista.pegarNome() << ", CPF: " << lista.pegarCpf() << "\n";
+    }
 }

@@ -1,9 +1,10 @@
 #pragma once
-#include "include/model/ClientesModel.h"
+
 #include <vector>
-#include <string>
 
 using namespace std;
+
+class ClientesModel;
 
 class ClientesRepository {
     private:

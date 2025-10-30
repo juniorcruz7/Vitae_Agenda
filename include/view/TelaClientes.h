@@ -6,4 +6,8 @@ class TelaClientes {
     void telaCadastro();
 
     void telaListagem();
+
+    void telaDeletar();
+
+    //void telaEditar();
 };

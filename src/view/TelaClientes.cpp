@@ -35,7 +35,7 @@ void TelaClientes::exibirMenu() {
         case 3:
             //Editar
         case 4:
-            //Deletar
+            telaDeletar();
         default: //Voltar para Tela Inicial
             exibirMenu();
         }
@@ -84,6 +84,31 @@ void TelaClientes::telaListagem() {
     cin >> op;
 
     if (op == 0) {
+        exibirMenu();
+    }
+}
+
+void TelaClientes::telaDeletar() {
+    system("cls");
+    int id;
+    int op;
+
+    cout << "----- DELETAR CLIENTES -----\n\n";
+    cout << "Digite o ID de quem você deseja deletar: \n";
+
+    cin >> id;
+    auto cliente = controlador.buscarID(id);
+
+    cout << "\nCerteza que deseja deletar: ";
+    cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "\n";
+    
+    cout << "[1] Sim";
+    cout << "[2] Não";
+
+    if (op == 1) {
+        controlador.deletarCliente(id);
+        cout << "Cliente deletado.";
+    } else if (op == 2) {
         exibirMenu();
     }
 }

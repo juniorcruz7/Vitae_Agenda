@@ -2,17 +2,25 @@
 #include "include/model/ClientesModel.h"
 #include "include/repository/ClientesRepository.h"
 
+ClientesRepository repositorio;
+
 using namespace std;
+
+ClientesModel ClientesController:: buscarID(int _id) {
+    
+    return repositorio.buscarId(_id);
+}
 
 void ClientesController::cadastrarCliente(string& nome, string& cpf) {
     ClientesModel cliente(nome, cpf);
-    ClientesRepository repositorio;
-   
+       
     repositorio.salvar(cliente);
 }
 
 vector <ClientesModel> ClientesController::listarCliente() {
-    ClientesRepository repositorio;
-
+    
     return repositorio.listar();
+}
+
+void ClientesController::deletarCliente(int _id) {   
 }

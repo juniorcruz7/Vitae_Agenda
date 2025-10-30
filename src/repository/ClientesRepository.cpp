@@ -2,17 +2,27 @@
 #include "include/model/ClientesModel.h"
 #include <fstream>
 #include <sstream>
+#include <filesystem>
 
 using namespace std;
 
+void ClientesRepository::garantirArquivo() {
+        if (!filesystem::exists(arquivo)) {
+            ofstream out(arquivo);
+            out.close();
+        }
+}
+
 void ClientesRepository::salvar(const ClientesModel& cliente) {
+    garantirArquivo();
     ofstream out(arquivo, ios::app);
     out << cliente.pegarId() << "," << cliente.pegarNome() << "," << cliente.pegarCpf() << "\n";
 
     out.close();
 }
 
-vector <ClientesModel> ClientesRepository::listar()const{
+vector <ClientesModel> ClientesRepository::listar() {
+    garantirArquivo();
     vector <ClientesModel> clientes;
     ifstream in(arquivo);
     string linha;
@@ -34,6 +44,7 @@ vector <ClientesModel> ClientesRepository::listar()const{
 }
 
 ClientesModel ClientesRepository::buscarId(int _id) {
+    garantirArquivo();
     ifstream in(arquivo);
     string linha;
     bool encontrado = false;
@@ -58,6 +69,7 @@ ClientesModel ClientesRepository::buscarId(int _id) {
 }
 
 void ClientesRepository::deletar(int _id) {
+    garantirArquivo();
     ifstream in(arquivo);
     
     vector<string> linhas;

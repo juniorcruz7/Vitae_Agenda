@@ -7,13 +7,14 @@ using namespace std;
 class ClientesModel;
 
 class ClientesRepository {
-    private:
+    public:
     string arquivo = "data/clientes.txt";
 
-    public:
+    void garantirArquivo();
+
     void salvar(const ClientesModel& cliente);
 
-    vector <ClientesModel> listar() const;
+    vector <ClientesModel> listar();
     
     ClientesModel buscarId(int _id);
     

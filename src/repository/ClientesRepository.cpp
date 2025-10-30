@@ -28,3 +28,24 @@ vector <ClientesModel> ClientesRepository::listar()const{
     }
     return clientes;
 }
+
+ClientesModel ClientesRepository::buscarId(int _id) {
+    ifstream in(arquivo);
+    string linha;
+
+    while (getline(in, linha)) {
+        stringstream ss(linha);
+        string idStr, nome, cpf;
+
+        getline(ss, idStr, ',');
+        getline(ss, nome, ',');
+        getline(ss, cpf, ',');
+
+        if (!idStr.empty()) {
+            int id = stoi(idStr);
+            if (id == _id) {
+                return ClientesModel(nome, cpf);
+            }
+        }
+    }
+}

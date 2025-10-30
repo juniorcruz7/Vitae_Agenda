@@ -13,5 +13,6 @@ class ClientesRepository {
     public:
     void salvar(const ClientesModel& cliente);
     vector <ClientesModel> listar() const;
+    ClientesModel buscarId(int _id);
 
 };

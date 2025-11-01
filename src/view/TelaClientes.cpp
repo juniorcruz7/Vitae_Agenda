@@ -1,7 +1,7 @@
-#include "include/view/TelaClientes.h"
-#include "include/view/TelaInicial.h"
-#include "include/controller/ClientesController.h"
-#include "include/model/ClientesModel.h"
+#include "view/TelaClientes.h"
+#include "view/TelaInicial.h"
+#include "controller/ClientesController.h"
+#include "model/ClientesModel.h"
 #include <iostream>
 #include <string>
 #include <vector>
@@ -10,9 +10,12 @@ using namespace std;
 
 ClientesController controlador;
 
+
 void TelaClientes::exibirMenu() {
-    int op;
-    
+    string op;
+    TelaInicial telainicial;
+    bool fim = false;
+
     do {
         system("cls");
 
@@ -22,36 +25,34 @@ void TelaClientes::exibirMenu() {
         cout << "[3] Editar    Clientes\n";
         cout << "[4] Deletar   Clientes\n\n";
 
-        cout << "[0] Voltar";
+        cout << "[0] Voltar\n";
 
-        cin >> op;
+        getline(cin, op);
 
-        switch (op)
-        {
-        case 1:
+        if (op == "1") {
             telaCadastro();
-        case 2:
+        } else if (op == "2") {
             telaListagem();
-        case 3:
-            //Editar
-        case 4:
+        } else if (op == "3") {
+            telaEditar();
+        } else if (op == "4") {
             telaDeletar();
-        default: //Voltar para Tela Inicial
-            exibirMenu();
+        } else if (op == "0") {
+            telainicial.exibirMenu();
         }
 
-    } while (op =! 0);
+    } while (!fim);
 }
 
 void TelaClientes::telaCadastro() {
     system("cls");
     string nome, cpf;
-    int op;
+    string op;
 
     cout << "----- CADASTRO DE CLIENTES -----\n\n";
     cout << "Digite o nome do cliente: \n";
     getline(cin,nome);
-    cout << "Digite o CPF do cliente: \n";
+    cout << "\nDigite o CPF do cliente: \n";
     getline(cin,cpf);
     
     controlador.cadastrarCliente(nome,cpf);
@@ -60,11 +61,11 @@ void TelaClientes::telaCadastro() {
     cout << "[1] Sim\n";
     cout << "[2] Não\n";
 
-    cin >> op;
+    getline(cin, op);
 
-    if (op == 1) {
+    if (op == "1") {
         telaCadastro();
-    } else if (op == 2) {
+    } else if (op == "2") {
         exibirMenu();
     };
 }
@@ -72,7 +73,7 @@ void TelaClientes::telaCadastro() {
 void TelaClientes::telaListagem() {
     system("cls");
     vector <ClientesModel> vetor = controlador.listarCliente();
-    int op;
+    string op;
     
     cout << "----- CLIENTES CADASTRADOS -----\n\n";
 
@@ -80,51 +81,53 @@ void TelaClientes::telaListagem() {
         cout << "ID: " << lista.pegarId() << ", Nome: " << lista.pegarNome() << ", CPF: " << lista.pegarCpf() << "\n";
     }
 
-    cout << "[0] Voltar";
-    cin >> op;
+    cout << "[0] Voltar\n";
+    getline(cin, op);
 
-    if (op == 0) {
+    if (op == "0") {
         exibirMenu();
     }
 }
 
 void TelaClientes::telaDeletar() {
     system("cls");
-    int id;
-    int op;
+    string id, op;
 
     cout << "----- DELETAR CLIENTES -----\n\n";
     cout << "Digite o ID de quem você deseja deletar: \n";
 
-    cin >> id;
-    auto cliente = controlador.buscarID(id);
+    getline(cin, id);
+
+    int _id = stoi(id);
+    auto cliente = controlador.buscarID(_id);
 
     cout << "\nDeletar: ";
     cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "?\n";
     
-    cout << "[1] Sim";
-    cout << "[2] Não";
+    cout << "[1] Sim\n";
+    cout << "[2] Não\n";
 
-    cin >> op;
+    getline(cin, op);
 
-    if (op == 1) {
-        controlador.deletarCliente(id);
+    if (op == "1") {
+        controlador.deletarCliente(_id);
         cout << "Cliente deletado.";
-    } else if (op == 2) {
+    } else if (op == "2") {
         exibirMenu();
     }
 }
 
 void TelaClientes::telaEditar() {
     system("cls");
-    int id, op;
+    string id, op;
     string nome, cpf;
 
     cout << "----- EDITAR CLIENTES -----\n\n";
     cout << "Digite o ID do cliente que você deseja editar: \n";
 
-    cin >> id;
-    auto cliente = controlador.buscarID(id);
+    getline(cin, id);
+    int _id = stoi(id);
+    auto cliente = controlador.buscarID(_id);
 
     cout << "\nEditar: ";
     cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "?\n";
@@ -132,7 +135,7 @@ void TelaClientes::telaEditar() {
     cout << "[1] Sim\n";
     cout << "[2] Não\n";
 
-    cin >> op;
+    getline(cin, op);
 
     cout << "Nome: ";
     getline(cin, nome);
@@ -143,10 +146,10 @@ void TelaClientes::telaEditar() {
     cliente.alterarNome(nome);
     cliente.alterarCpf(cpf);
 
-    if (op == 1) {
-        controlador.editarClientes(id, cliente);
+    if (op == "1") {
+        controlador.editarClientes(_id, cliente);
         cout << "Cliente deletado.";
-    } else if (op == 2) {
+    } else if (op == "2") {
         exibirMenu();
     }
 }

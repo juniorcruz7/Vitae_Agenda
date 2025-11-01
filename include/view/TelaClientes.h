@@ -1,7 +1,8 @@
 #pragma once
 
 class TelaClientes {
-    void exibirMenu ();
+    public:
+    void exibirMenu();
 
     void telaCadastro();
 

@@ -1,9 +1,11 @@
-#include "include/view/TelaInicial.h"
+#include "view/TelaInicial.h"
+#include "view/TelaClientes.h"
 #include <iostream>
 
 using namespace std;
 
 void TelaInicial::exibirMenu() {
+    TelaClientes telaclientes;
     int op;
 
     do { 
@@ -22,12 +24,12 @@ void TelaInicial::exibirMenu() {
 
         cin >> op;
 
-        switch (op) {
-            case 1:
-                //vai entrar na opção de clientes
-            case 2:
-                //vai entrar na opção de agendamentos
-            default:  // sai do programa
+        if (op == 1) {
+            telaclientes.exibirMenu();
+        } else if (op == 2) {
+            
+        } else {
+            exit(EXIT_SUCCESS);
         }
     } while(op =! 0);
-}
+};

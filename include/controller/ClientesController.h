@@ -1,4 +1,10 @@
 #pragma once
+#include <vector>
+#include <string>
+
+class ClientesModel;
+
+using namespace std;
 
 class ClientesController {
     public:

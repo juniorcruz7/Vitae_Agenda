@@ -1,5 +1,5 @@
-#include "include/view/TelaAgendamentos.h"
-#include "src/view/TelaInicial.cpp"
+#include "view/TelaAgendamentos.h"
+#include "view/TelaInicial.h"
 #include <iostream>
 
 using namespace std;

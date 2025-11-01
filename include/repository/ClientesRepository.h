@@ -1,14 +1,17 @@
 #pragma once
 
 #include <vector>
+#include <string>
 
 using namespace std;
 
 class ClientesModel;
 
 class ClientesRepository {
+    private:
+    string arquivo;
     public:
-    string arquivo = "data/clientes.txt";
+    ClientesRepository();
 
     void garantirArquivo();
 

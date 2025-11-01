@@ -1,7 +1,9 @@
-#include "include/model/ClientesModel.h"
+#include "model/ClientesModel.h"
 #include <string>
 
 using namespace std;
+
+int ClientesModel::numClientes = 0;
 
 ClientesModel::ClientesModel(string _nome, string _cpf) {
     this->id=++numClientes;

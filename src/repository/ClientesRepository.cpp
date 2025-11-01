@@ -1,10 +1,14 @@
-#include "include/repository/ClientesRepository.h"
-#include "include/model/ClientesModel.h"
+#include "repository/ClientesRepository.h"
+#include "model/ClientesModel.h"
 #include <fstream>
 #include <sstream>
 #include <filesystem>
 
 using namespace std;
+
+ClientesRepository::ClientesRepository() : arquivo("data/clientes.txt") {
+
+}
 
 void ClientesRepository::garantirArquivo() {
     if (!filesystem::exists("data")) {
@@ -39,7 +43,7 @@ vector <ClientesModel> ClientesRepository::listar() {
         getline(ss, cpf, ',');
 
         if (!idStr.empty())
-            clientes.emplace_back(stoi(idStr), nome, cpf);
+            clientes.emplace_back(nome, cpf, stoi(idStr));
     }
 
     in.close();

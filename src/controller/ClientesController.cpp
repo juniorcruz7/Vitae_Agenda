@@ -1,6 +1,6 @@
-#include "include/controller/ClientesController.h"
-#include "include/model/ClientesModel.h"
-#include "include/repository/ClientesRepository.h"
+#include "controller/ClientesController.h"
+#include "model/ClientesModel.h"
+#include "repository/ClientesRepository.h"
 
 ClientesRepository repositorio;
 

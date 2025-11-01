@@ -27,6 +27,7 @@ void TelaClientes::exibirMenu() {
 
         cout << "[0] Voltar\n";
 
+        cout << "Opcao: ";
         getline(cin, op);
 
         if (op == "1") {
@@ -46,8 +47,7 @@ void TelaClientes::exibirMenu() {
 
 void TelaClientes::telaCadastro() {
     system("cls");
-    string nome, cpf;
-    string op;
+    string nome, cpf, op;
 
     cout << "----- CADASTRO DE CLIENTES -----\n\n";
     cout << "Digite o nome do cliente: \n";
@@ -59,8 +59,9 @@ void TelaClientes::telaCadastro() {
 
     cout << "Realizar outro cadastro?\n";
     cout << "[1] Sim\n";
-    cout << "[2] Não\n";
+    cout << "[0] Não\n";
 
+    cout << "Opcao: ";
     getline(cin, op);
 
     if (op == "1") {
@@ -82,6 +83,8 @@ void TelaClientes::telaListagem() {
     }
 
     cout << "[0] Voltar\n";
+
+    cout << "Opcao: ";
     getline(cin, op);
 
     if (op == "0") {
@@ -107,6 +110,7 @@ void TelaClientes::telaDeletar() {
     cout << "[1] Sim\n";
     cout << "[2] Não\n";
 
+    cout << "Opcao: ";
     getline(cin, op);
 
     if (op == "1") {
@@ -134,10 +138,11 @@ void TelaClientes::telaEditar() {
 
     cout << "[1] Sim\n";
     cout << "[2] Não\n";
+    cout << "Opcao: ";
 
     getline(cin, op);
 
-    cout << "Nome: ";
+    cout << "\nNome: ";
     getline(cin, nome);
 
     cout << "\nCPF: ";

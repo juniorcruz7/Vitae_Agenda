@@ -15,6 +15,10 @@ ClientesModel::ClientesModel(string _nome, string _cpf, int _id) {
     this->id=_id;
     this->nome=_nome;
     this->cpf=_cpf;
+
+    if (_id > id) {
+        numClientes = _id;
+    }
 }
 
 int ClientesModel::pegarId()const{

@@ -7,7 +7,10 @@
 using namespace std;
 
 void ClientesRepository::garantirArquivo() {
-        if (!filesystem::exists(arquivo)) {
+    if (!filesystem::exists("data")) {
+            filesystem::create_directory("data");
+        }
+    if (!filesystem::exists(arquivo)) {
             ofstream out(arquivo);
             out.close();
         }

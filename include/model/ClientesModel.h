@@ -12,6 +12,8 @@ class ClientesModel {
     public:
         ClientesModel (string _nome, string _cpf);
 
+        ClientesModel (string _nome, string _cpf, int _id);
+
         int pegarId() const;
 
         string pegarNome() const;

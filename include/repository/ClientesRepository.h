@@ -19,4 +19,6 @@ class ClientesRepository {
     ClientesModel buscarId(int _id);
     
     void deletar(int _id);
+
+    void editar (int _id, ClientesModel clienteEditado);
 };

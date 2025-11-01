@@ -23,4 +23,11 @@ vector <ClientesModel> ClientesController::listarCliente() {
 }
 
 void ClientesController::deletarCliente(int _id) {   
+    
+    return repositorio.deletar(_id); 
+}
+
+void ClientesController::editarClientes(int _id, ClientesModel clienteEditado) {
+    
+    return repositorio.editar(_id, clienteEditado);
 }

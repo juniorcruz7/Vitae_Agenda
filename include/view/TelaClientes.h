@@ -9,5 +9,5 @@ class TelaClientes {
 
     void telaDeletar();
 
-    //void telaEditar();
+    void telaEditar();
 };

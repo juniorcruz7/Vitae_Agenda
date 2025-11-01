@@ -9,6 +9,12 @@ ClientesModel::ClientesModel(string _nome, string _cpf) {
     this->cpf = _cpf;
 }
 
+ClientesModel::ClientesModel(string _nome, string _cpf, int _id) {
+    this->id=_id;
+    this->nome=_nome;
+    this->cpf=_cpf;
+}
+
 int ClientesModel::pegarId()const{
     return id;
 }

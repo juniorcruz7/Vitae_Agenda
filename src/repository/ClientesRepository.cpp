@@ -60,9 +60,13 @@ ClientesModel ClientesRepository::buscarId(int _id) {
         if (!idStr.empty()) {
             int id = stoi(idStr);
             if (id == _id) {
-                return ClientesModel(nome, cpf);
+                return ClientesModel(nome, cpf, id);
+                encontrado = true;
             }
         }
+    }
+    if (!encontrado) {
+        throw runtime_error("\nCliente com o ID informado não encontrado.");
     }
 
     in.close();
@@ -102,8 +106,41 @@ void ClientesRepository::deletar(int _id) {
         out << l << "\n";
     }
     out.close();
+}
 
-    if (!encontrado) {
-        throw runtime_error("Cliente com o ID informado não encontrado.");
+void ClientesRepository::editar(int _id, ClientesModel clienteEditado) {
+    garantirArquivo();
+    ifstream in(arquivo);
+
+    vector <string> linhas;
+    string linha;
+    bool encontrado = false;
+
+    while (getline(in, linha)) {
+        stringstream ss(linha);
+        string idStr, nome, cpf;
+
+        getline(ss, idStr, ',');
+        getline(ss, nome, ',');
+        getline(ss, cpf, ',');
+
+        if (!idStr.empty()) {
+            int id = stoi(idStr);
+            if (id == _id) {
+                string novaLinha = to_string(clienteEditado.pegarId()) + "," + clienteEditado.pegarNome() + "," + clienteEditado.pegarCpf();
+                linhas.push_back(novaLinha);
+                encontrado = true;
+            } else {
+                linhas.push_back(linha);
+            }
+        }
     }
+
+    in.close();
+
+    ofstream out(arquivo, ios::trunc);
+    for (const auto& l : linhas) {
+        out << l << "\n";
+    }
+    out.close();      
 }

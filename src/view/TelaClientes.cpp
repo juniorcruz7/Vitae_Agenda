@@ -99,14 +99,52 @@ void TelaClientes::telaDeletar() {
     cin >> id;
     auto cliente = controlador.buscarID(id);
 
-    cout << "\nCerteza que deseja deletar: ";
-    cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "\n";
+    cout << "\nDeletar: ";
+    cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "?\n";
     
     cout << "[1] Sim";
     cout << "[2] Não";
 
+    cin >> op;
+
     if (op == 1) {
         controlador.deletarCliente(id);
+        cout << "Cliente deletado.";
+    } else if (op == 2) {
+        exibirMenu();
+    }
+}
+
+void TelaClientes::telaEditar() {
+    system("cls");
+    int id, op;
+    string nome, cpf;
+
+    cout << "----- EDITAR CLIENTES -----\n\n";
+    cout << "Digite o ID do cliente que você deseja editar: \n";
+
+    cin >> id;
+    auto cliente = controlador.buscarID(id);
+
+    cout << "\nEditar: ";
+    cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "?\n";
+
+    cout << "[1] Sim\n";
+    cout << "[2] Não\n";
+
+    cin >> op;
+
+    cout << "Nome: ";
+    getline(cin, nome);
+
+    cout << "\nCPF: ";
+    getline(cin, cpf);
+
+    cliente.alterarNome(nome);
+    cliente.alterarCpf(cpf);
+
+    if (op == 1) {
+        controlador.editarClientes(id, cliente);
         cout << "Cliente deletado.";
     } else if (op == 2) {
         exibirMenu();

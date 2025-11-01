@@ -9,4 +9,6 @@ class ClientesController {
     vector <ClientesModel> listarCliente();
 
     void deletarCliente(int _id);
+
+    void editarClientes(int _id, ClientesModel clienteEditado);
 };

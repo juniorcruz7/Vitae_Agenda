@@ -1,4 +1,4 @@
-#include "include/repository/AgendamentosRepository.h"
+#include "repository/AgendamentosRepository.h"
 #include <fstream>
 #include <sstream>
 #include <filesystem>
@@ -7,11 +7,13 @@
 using namespace std;
 
 AgendamentosRepository::AgendamentosRepository(const string& nomeArquivo)
-    : BaseRepository<AgendamentosModel>(nomeArquivo), proximo_id(0) 
+    : BaseRepository<AgendamentosModel>(nomeArquivo) // inicializa a base
 {
-    garantirArquivo();
-    listar(); 
+    // Aqui você pode chamar listar ou outras inicializações se necessário
+    listar();
 }
+
+
 
 
 void AgendamentosRepository::garantirArquivo() {

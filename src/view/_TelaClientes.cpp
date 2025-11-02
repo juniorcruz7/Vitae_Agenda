@@ -1,12 +1,12 @@
-#include "include/view/TelaClientes.h"
-#include "src/view/TelaInicial.cpp"
+#include "view/_TelaClientes.h"
+#include "view/_TelaInicial.h"
 #include <iostream>
 
 using namespace std;
 
-void TelaClientes::exibirMenu() {
+void _TelaClientes::exibirMenu() {
     int op;
-    TelaInicial tela;
+    _TelaInicial tela;
 
     do {
         system("cls");
@@ -25,15 +25,21 @@ void TelaClientes::exibirMenu() {
         {
         case 1:
             //Cadastrar
+            break;
         case 2:
             //Listar
+            break;
         case 3:
             //Editar
+            break;
         case 4:
             //Deletar
+            break;
         default: //Voltar para Tela Inicial
             tela.exibirMenu();
+                break;
+
         }
 
-    } while (op =! 0);
+    } while (op != 0);
 }

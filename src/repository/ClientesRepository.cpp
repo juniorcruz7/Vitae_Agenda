@@ -1,5 +1,5 @@
-#include "include/repository/ClientesRepository.h"
-#include "include/model/ClientesModel.h"
+#include "repository/ClientesRepository.h"
+#include "model/ClientesModel.h"
 #include <fstream>
 #include <sstream>
 #include <filesystem>
@@ -7,11 +7,11 @@
 using namespace std;
 
 ClientesRepository::ClientesRepository(const string& nomeArquivo)
-    : BaseRepository<ClientesModel>(nomeArquivo), proximo_id(0)
+    : BaseRepository<ClientesModel>(nomeArquivo) // inicializa a base
 {
-    garantirArquivo();
-    listar(); // atualiza o proximo_id
+    listar();
 }
+
 
 
 void ClientesRepository::garantirArquivo() {

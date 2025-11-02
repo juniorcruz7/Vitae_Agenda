@@ -1,12 +1,13 @@
-#include "include/view/TelaInicial.h"
+#include "view/_TelaInicial.h"
 #include <iostream>
-
 using namespace std;
 
-void TelaInicial::exibirMenu() {
+
+
+void _TelaInicial::exibirMenu() {
     int op;
 
-    do { 
+    do {
         system("cls");
 
         cout << "++++++++++++++++++++++++\n";
@@ -19,15 +20,15 @@ void TelaInicial::exibirMenu() {
         cout << "[0] Sair\n\n";
 
         cout << "Opcao: ";
-
         cin >> op;
 
         switch (op) {
             case 1:
-                //vai entrar na opção de clientes
+                break;
             case 2:
-                //vai entrar na opção de agendamentos
-            default:  // sai do programa
+                break;
+            default:
+                break;
         }
-    } while(op =! 0);
+    } while(op != 0);
 }

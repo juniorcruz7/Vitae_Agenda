@@ -10,8 +10,6 @@ class ClientesModel {
         int id;
         static int numClientes;
     public:
-        ClientesModel (string _nome, string _cpf);
-
         ClientesModel (string _nome, string _cpf, int _id);
 
         int pegarId() const;

@@ -1,6 +1,6 @@
 #pragma once
 #include "BaseRepository.h"
-#include "ClientesModel.h"
+#include "model/ClientesModel.h"
 #include <vector>
 #include <string>
 
@@ -9,8 +9,7 @@ private:
     int proximo_id; 
 
 public:
-    ClientesRepository(const std::string& nomeArquivo = "data/clientes.txt")
-        : BaseRepository<ClientesModel>(nomeArquivo), proximo_id(0) {}
+    ClientesRepository(const std::string& nomeArquivo = "data/clientes.txt");
 
     void garantirArquivo() override;
     void salvar(ClientesModel& cliente) override;

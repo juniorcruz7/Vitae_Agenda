@@ -1,17 +1,18 @@
 #pragma once
 #include "BaseRepository.h"
-#include "AgendamentosModel.h"
+#include "model/AgendamentosModel.h"
 #include <vector>
 #include <string>
 
 class AgendamentosRepository : public BaseRepository<AgendamentosModel> {
 private:
-    int proximo_id; 
+    int proximo_id;
+    std::vector<AgendamentosModel> agendamentos;
+    std::string arquivo;
+
 
 public:
-    AgendamentosRepository(const std::string& nomeArquivo = "data/agendamentos.txt")
-        : BaseRepository<AgendamentosModel>(nomeArquivo), proximo_id(0) {}
-
+    AgendamentosRepository(const std::string& nomeArquivo = "data/agendamentos.txt");
     void garantirArquivo() override;
     void salvar(AgendamentosModel& agendamento) override; 
     void editar(int id, const AgendamentosModel& agendamento) override;

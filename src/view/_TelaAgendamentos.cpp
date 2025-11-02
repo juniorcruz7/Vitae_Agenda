@@ -1,12 +1,12 @@
-#include "include/view/TelaAgendamentos.h"
-#include "src/view/TelaInicial.cpp"
+#include "view/_TelaAgendamentos.h"
+#include "_TelaInicial.cpp"
 #include <iostream>
 
 using namespace std;
 
-void TelaAgendamentos::exibirMenu() {
+void _TelaAgendamentos::exibirMenu() {
     int op;
-    TelaInicial tela;
+    _TelaInicial tela;
 
     do {
         system("cls");

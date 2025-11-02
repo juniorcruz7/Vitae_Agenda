@@ -1,24 +1,21 @@
 #pragma once
-
-#include "model/AgendamentoModel.h"
-#include <string>
+#include "BaseRepository.h"
+#include "AgendamentosModel.h"
 #include <vector>
+#include <string>
 
-using namespace std;
-
-class AgendamentosController {
-
+class AgendamentosRepository : public BaseRepository<AgendamentosModel> {
 private:
-    vector<AgendamentosModel> agendamentos;
-    int proximo_id;
+    int proximo_id; 
 
 public:
+    AgendamentosRepository(const std::string& nomeArquivo = "data/agendamentos.txt")
+        : BaseRepository<AgendamentosModel>(nomeArquivo), proximo_id(0) {}
 
-    AgendamentosController();
-
-    void criar_agendamento(const string& data, const string& horario, const string& descricao);
-    void listar_agendamentos() const;
-    void remover_agendamentos(int id);
-    void editar_agendamentos(int id, const string& nova_data, const string& novo_horario, const string& nova_descricao);
-
+    void garantirArquivo() override;
+    void salvar(AgendamentosModel& agendamento) override; 
+    void editar(int id, const AgendamentosModel& agendamento) override;
+    void deletar(int id) override;
+    AgendamentosModel buscarId(int id) override;
+    std::vector<AgendamentosModel> listar() override;
 };

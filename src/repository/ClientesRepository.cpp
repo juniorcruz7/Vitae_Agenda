@@ -6,24 +6,35 @@
 
 using namespace std;
 
-ClientesRepository::ClientesRepository() : arquivo("data/clientes.txt") {
-
+ClientesRepository::ClientesRepository(const string& nomeArquivo)
+    : BaseRepository<ClientesModel>(nomeArquivo), proximo_id(0)
+{
+    garantirArquivo();
+    listar(); // atualiza o proximo_id
 }
+
 
 void ClientesRepository::garantirArquivo() {
     if (!filesystem::exists("data")) {
             filesystem::create_directory("data");
         }
-    if (!filesystem::exists(arquivo)) {
-            ofstream out(arquivo);
+    if (!filesystem::exists(this->arquivo)) {
+            ofstream out(this->arquivo);
             out.close();
         }
 }
 
-void ClientesRepository::salvar(const ClientesModel& cliente) {
+void ClientesRepository::salvar(ClientesModel& cliente) {
     garantirArquivo();
+
+    if (cliente.pegarId() == 0) {      
+        cliente.definirId(++proximo_id); 
+    }
+
     ofstream out(arquivo, ios::app);
-    out << cliente.pegarId() << "," << cliente.pegarNome() << "," << cliente.pegarCpf() << "\n";
+    out << cliente.pegarId() << ","
+        << cliente.pegarNome() << ","
+        << cliente.pegarCpf() << "\n";
 
     out.close();
 }
@@ -31,7 +42,7 @@ void ClientesRepository::salvar(const ClientesModel& cliente) {
 vector <ClientesModel> ClientesRepository::listar() {
     garantirArquivo();
     vector <ClientesModel> clientes;
-    ifstream in(arquivo);
+    ifstream in(this->arquivo);
     string linha;
 
     while (getline(in, linha)) {
@@ -52,7 +63,7 @@ vector <ClientesModel> ClientesRepository::listar() {
 
 ClientesModel ClientesRepository::buscarId(int _id) {
     garantirArquivo();
-    ifstream in(arquivo);
+    ifstream in(this->arquivo);
     string linha;
     bool encontrado = false;
 
@@ -81,7 +92,7 @@ ClientesModel ClientesRepository::buscarId(int _id) {
 
 void ClientesRepository::deletar(int _id) {
     garantirArquivo();
-    ifstream in(arquivo);
+    ifstream in(this->arquivo);
     
     vector<string> linhas;
     string linha;
@@ -108,7 +119,7 @@ void ClientesRepository::deletar(int _id) {
 
     in.close();
 
-    ofstream out(arquivo, ios::trunc);
+    ofstream out(this->arquivo, ios::trunc);
     for (const auto& l : linhas) {
         out << l << "\n";
     }
@@ -117,7 +128,7 @@ void ClientesRepository::deletar(int _id) {
 
 void ClientesRepository::editar(int _id, const ClientesModel& clienteEditado) {
     garantirArquivo();
-    ifstream in(arquivo);
+    ifstream in(this->arquivo);
 
     vector <string> linhas;
     string linha;
@@ -145,7 +156,7 @@ void ClientesRepository::editar(int _id, const ClientesModel& clienteEditado) {
 
     in.close();
 
-    ofstream out(arquivo, ios::trunc);
+    ofstream out(this->arquivo, ios::trunc);
     for (const auto& l : linhas) {
         out << l << "\n";
     }

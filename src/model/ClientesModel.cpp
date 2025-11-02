@@ -3,10 +3,22 @@
 
 using namespace std;
 
+int ClientesModel::numClientes = 0;
+
 ClientesModel::ClientesModel(string _nome, string _cpf) {
     this->id=++numClientes;
     this->nome = _nome;
     this->cpf = _cpf;
+}
+
+ClientesModel::ClientesModel(string _nome, string _cpf, int _id) {
+    this->id=_id;
+    this->nome=_nome;
+    this->cpf=_cpf;
+
+    if (_id > id) {
+        numClientes = _id;
+    }
 }
 
 int ClientesModel::pegarId()const{
@@ -27,4 +39,8 @@ string ClientesModel::pegarCpf()const{
 
 void ClientesModel::alterarCpf(string _cpf) {
     this->cpf = _cpf;
+}
+
+void ClientesModel::definirId(int _id) {
+    id = _id;
 }

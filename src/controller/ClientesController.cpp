@@ -6,28 +6,31 @@ ClientesRepository repositorio;
 
 using namespace std;
 
-ClientesModel ClientesController:: buscarID(int _id) const {
-    
-    return repositorio.buscarId(_id);
+void ClientesController::cadastrar( ClientesModel& item) {
+    repositorio.salvar(item);
 }
 
-void ClientesController::cadastrar(const ClientesModel& item) {
-    ClientesModel cliente(nome, cpf);
-       
-    repositorio.salvar(cliente);
+void ClientesController::editar(int id, const ClientesModel& itemEditado) {
+    repositorio.editar(id, itemEditado);
 }
 
-vector <ClientesModel> ClientesController::listar() const {
-    
+void ClientesController::deletar(int id) {
+    repositorio.deletar(id);
+}
+
+ClientesModel ClientesController::buscar(int id) {
+    return repositorio.buscarId(id);
+}
+
+vector<ClientesModel> ClientesController::listar() {
     return repositorio.listar();
 }
 
-void ClientesController::deletar(int _id) {   
-    
-    repositorio.deletar(_id); 
+ClientesModel ClientesController::buscarID(int id) {
+    return buscar(id);
 }
 
-void ClientesController::editar(int _id, const ClientesModel& clienteEditado) {
-    
-    return repositorio.editar(_id, clienteEditado);
+void ClientesController::cadastrarCliente(const string& nome, const string& cpf, int id) {
+    ClientesModel cliente(nome, cpf, id);
+    cadastrar(cliente);
 }

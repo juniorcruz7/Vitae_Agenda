@@ -1,14 +1,35 @@
 #include "include/repository/AgendamentosRepository.h"
 #include <fstream>
 #include <sstream>
+#include <filesystem>
+#include <stdexcept>
 
 using namespace std;
 
-AgendamentosRepository::AgendamentosRepository(string nomeArquivo) {
-    arquivo = nomeArquivo;
+AgendamentosRepository::AgendamentosRepository(const string& nomeArquivo)
+    : BaseRepository<AgendamentosModel>(nomeArquivo), proximo_id(0) 
+{
+    garantirArquivo();
+    listar(); // 
 }
 
-void AgendamentosRepository::salvar(const AgendamentosModel& agendamento) {
+
+void AgendamentosRepository::garantirArquivo() {
+    if (!filesystem::exists("data")) {
+        filesystem::create_directory("data");
+    }
+    if (!filesystem::exists(arquivo)) {
+        ofstream out(arquivo);
+        out.close();
+    }
+}
+
+void AgendamentosRepository::salvar(AgendamentosModel& agendamento) {
+    garantirArquivo();
+    if (agendamento.pegar_id_agendamento() == 0) { 
+        agendamento.definirId(++proximo_id);       
+    }
+
     ofstream out(arquivo, ios::app);
     out << agendamento.pegar_id_agendamento() << ","
         << agendamento.pegar_data() << ","
@@ -16,7 +37,8 @@ void AgendamentosRepository::salvar(const AgendamentosModel& agendamento) {
         << agendamento.pegar_descricao() << "\n";
 }
 
-vector<AgendamentosModel> AgendamentosRepository::listar() const {
+vector<AgendamentosModel> AgendamentosRepository::listar() {
+    garantirArquivo();
     vector<AgendamentosModel> lista;
     ifstream in(arquivo);
     string linha;
@@ -30,16 +52,30 @@ vector<AgendamentosModel> AgendamentosRepository::listar() const {
         getline(ss, horario, ',');
         getline(ss, descricao, ',');
 
-        if (!idStr.empty())
-            lista.emplace_back(data, horario, descricao, stoi(idStr));
+        if (!idStr.empty()) {
+            int id = stoi(idStr);
+            if (id > proximo_id) proximo_id = id; 
+            lista.emplace_back(data, horario, descricao, id);
+        }
     }
-
     return lista;
 }
 
-void AgendamentosRepository::remover(int id) {
+AgendamentosModel AgendamentosRepository::buscarId(int id) {
+    garantirArquivo();
     vector<AgendamentosModel> lista = listar();
-    ofstream out(arquivo, ios::trunc); 
+    for (const auto& a : lista) {
+        if (a.pegar_id_agendamento() == id) {
+            return a;
+        }
+    }
+    throw runtime_error("Agendamento com o ID informado não encontrado.");
+}
+
+void AgendamentosRepository::deletar(int id) {
+    garantirArquivo();
+    vector<AgendamentosModel> lista = listar();
+    ofstream out(arquivo, ios::trunc);
 
     for (const auto& a : lista) {
         if (a.pegar_id_agendamento() != id) {
@@ -51,13 +87,13 @@ void AgendamentosRepository::remover(int id) {
     }
 }
 
-void AgendamentosRepository::editar(const AgendamentosModel& agendamento) {
+void AgendamentosRepository::editar(int id, const AgendamentosModel& agendamento) {
     vector<AgendamentosModel> lista = listar();
     ofstream out(arquivo, ios::trunc);
 
     for (auto& a : lista) {
-        if (a.pegar_id_agendamento() == agendamento.pegar_id_agendamento()) {
-            out << agendamento.pegar_id_agendamento() << ","
+        if (a.pegar_id_agendamento() == id) {
+            out << id << "," 
                 << agendamento.pegar_data() << ","
                 << agendamento.pegar_horario() << ","
                 << agendamento.pegar_descricao() << "\n";

@@ -12,6 +12,8 @@ class ClientesModel {
     public:
         ClientesModel (string _nome, string _cpf);
 
+        ClientesModel (string _nome, string _cpf, int _id);
+
         int pegarId() const;
 
         string pegarNome() const;
@@ -21,4 +23,7 @@ class ClientesModel {
         string pegarCpf() const;
 
         void alterarCpf(string _cpf);
+
+        void definirId(int _id);
+
 };

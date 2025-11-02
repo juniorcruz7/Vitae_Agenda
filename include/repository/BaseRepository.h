@@ -1,10 +1,21 @@
 #pragma once
 #include <vector>
+#include <string>
 
-template<typename T>
+template <typename T>
 class BaseRepository {
+protected:
+    std::string arquivo;
+
 public:
-    virtual void salvar(const T& model) = 0;
+    BaseRepository(const std::string& nomeArquivo) : arquivo(nomeArquivo) {}
+
+    virtual void garantirArquivo() = 0;
+    virtual void salvar(T& item) = 0;
+    virtual void editar(int id, const T& itemEditado) = 0;
+    virtual void deletar(int id) = 0;
+    virtual T buscarId(int id) = 0;
     virtual std::vector<T> listar() = 0;
-    virtual ~BaseRepository() {}
+
+    virtual ~BaseRepository() = default;
 };

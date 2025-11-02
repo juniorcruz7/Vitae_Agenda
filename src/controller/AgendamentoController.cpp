@@ -27,6 +27,6 @@ std::vector<AgendamentosModel> AgendamentosController::listar() {
 
 // Método específico
 void AgendamentosController::criar_agendamento(const std::string& data, const std::string& horario, const std::string& descricao) {
-    AgendamentosModel a(data, horario, descricao, proximo_id);
+    AgendamentosModel a(data, horario, descricao, 0);
     cadastrar(a);
 }

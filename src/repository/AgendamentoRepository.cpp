@@ -10,7 +10,7 @@ AgendamentosRepository::AgendamentosRepository(const string& nomeArquivo)
     : BaseRepository<AgendamentosModel>(nomeArquivo), proximo_id(0) 
 {
     garantirArquivo();
-    listar(); // 
+    listar(); 
 }
 
 
@@ -30,11 +30,12 @@ void AgendamentosRepository::salvar(AgendamentosModel& agendamento) {
         agendamento.definirId(++proximo_id);       
     }
 
-    ofstream out(arquivo, ios::app);
+    ofstream out(arquivo, ios::app);    
     out << agendamento.pegar_id_agendamento() << ","
         << agendamento.pegar_data() << ","
         << agendamento.pegar_horario() << ","
         << agendamento.pegar_descricao() << "\n";
+    out.close();
 }
 
 vector<AgendamentosModel> AgendamentosRepository::listar() {

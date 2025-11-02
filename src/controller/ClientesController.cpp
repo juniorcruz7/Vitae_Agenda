@@ -5,6 +5,7 @@
 extern ClientesRepository repositorio;
 
 using namespace std;
+ClientesController::ClientesController() {}
 
 void ClientesController::cadastrar( ClientesModel& item) {
     repositorio.salvar(item);

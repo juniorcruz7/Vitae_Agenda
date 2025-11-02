@@ -1,5 +1,18 @@
 {
   "files.associations": {
-    "xstring": "cpp"
-  }
+    "*.embeddedhtml": "html",
+    "xstring": "cpp",
+    "iosfwd": "cpp",
+    "array": "cpp",
+    "deque": "cpp",
+    "string": "cpp",
+    "unordered_map": "cpp",
+    "vector": "cpp",
+    "string_view": "cpp",
+    "format": "cpp",
+    "initializer_list": "cpp",
+    "span": "cpp",
+    "text_encoding": "cpp"
+  },
+  "C_Cpp.default.compilerPath": "C:/msys64/ucrt64/bin/gcc.exe"
 }

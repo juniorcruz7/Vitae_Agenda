@@ -11,41 +11,41 @@ AgendamentosModel::AgendamentosModel() {
     id_agendamento = 0;
 }
 
-AgendamentosModel::AgendamentosModel(string data, string horario, string descricao, int id_agendamento) {
-    this->data = data;
-    this->horario = horario;
-    this->descricao = descricao;
-    this->id_agendamento = id_agendamento;
+AgendamentosModel::AgendamentosModel(string _data, string _horario, string _descricao, int _id_agendamento) {
+    this->data = _data;
+    this->horario = _horario;
+    this->descricao = _descricao;
+    this->id_agendamento = _id_agendamento;
 }
 
 AgendamentosModel::~AgendamentosModel() {
 
 }
 
-int AgendamentosModel::pegar_id_agendamento() const {
+int AgendamentosModel::pegarId() const {
     return id_agendamento;
 }
 
-string AgendamentosModel::pegar_data() const {
+string AgendamentosModel::pegarData() const {
     return data;
 }
 
-string AgendamentosModel::pegar_horario() const {
+string AgendamentosModel::pegarHorario() const {
     return horario;
 }
 
-string AgendamentosModel::pegar_descricao() const {
+string AgendamentosModel::pegarDescricao() const {
     return descricao;
 }
 
-void AgendamentosModel::alterar_data(string data) {
-    this->data = data;
+void AgendamentosModel::alterarData(string _data) {
+    this->data = _data;
 }
 
-void AgendamentosModel::alterar_horario(string horario) {
-    this->horario = horario;
+void AgendamentosModel::alterarHorario(string _horario) {
+    this->horario = _horario;
 }
 
-void AgendamentosModel::alterar_descricao(string descricao) {
-    this->descricao = descricao;
+void AgendamentosModel::alterarDescricao(string _descricao) {
+    this->descricao = _descricao;
 }

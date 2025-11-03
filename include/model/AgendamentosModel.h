@@ -14,16 +14,16 @@ private:
 public:
 
     AgendamentosModel();
-    AgendamentosModel(string data, string horario, string descricao, int id_agendamento);
+    AgendamentosModel(string _data, string _horario, string _descricao, int _id_agendamento);
     ~AgendamentosModel();
 
-    int pegar_id_agendamento() const;
-    string pegar_data() const;
-    string pegar_horario() const;
-    string pegar_descricao() const;
+    int pegarId() const;
+    string pegarData() const;
+    string pegarHorario() const;
+    string pegarDescricao() const;
 
-    void alterar_data(string data);
-    void alterar_horario(string horario);
-    void alterar_descricao(string descricao);
+    void alterarData(string data);
+    void alterarHorario(string horario);
+    void alterarDescricao(string descricao);
 
 };

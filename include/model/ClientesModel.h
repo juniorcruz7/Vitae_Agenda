@@ -5,8 +5,7 @@ using namespace std;
 
 class ClientesModel {
     private:
-        string nome;
-        string cpf;
+        string nome, cpf;
         int id;
         static int numClientes;
     public:

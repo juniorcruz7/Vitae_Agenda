@@ -1,4 +1,4 @@
-#include "view/_TelaClientes.h"
+#include "view/TelaClientes.h"
 #include "view/TelaInicial.h"
 #include "controller/ClientesController.h"
 #include "model/ClientesModel.h"
@@ -11,7 +11,7 @@ using namespace std;
 ClientesController controlador;
 
 
-void _TelaClientes::exibirMenu() {
+void TelaClientes::exibirMenu() {
     string op;
     TelaInicial telainicial;
     bool fim = false;
@@ -44,7 +44,7 @@ void _TelaClientes::exibirMenu() {
     } while (!fim);
 }
 
-void _TelaClientes::telaCadastro() {
+void TelaClientes::telaCadastro() {
     system("cls");
     string nome, cpf;
     string op;
@@ -70,7 +70,7 @@ void _TelaClientes::telaCadastro() {
     };
 }
 
-void _TelaClientes::telaListagem() {
+void TelaClientes::telaListagem() {
     system("cls");
     vector <ClientesModel> vetor = controlador.listar();
     string op;
@@ -89,7 +89,7 @@ void _TelaClientes::telaListagem() {
     }
 }
 
-void _TelaClientes::telaDeletar() {
+void TelaClientes::telaDeletar() {
     system("cls");
     string id, op;
 
@@ -117,7 +117,7 @@ void _TelaClientes::telaDeletar() {
     }
 }
 
-void _TelaClientes::telaEditar() {
+void TelaClientes::telaEditar() {
     system("cls");
     string id, op;
     string nome, cpf;

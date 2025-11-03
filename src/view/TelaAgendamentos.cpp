@@ -8,7 +8,7 @@
 
 using namespace std;
 
-AgendamentosController controlador;
+AgendamentosController controlador_agendamento;
 
 void TelaAgendamentos::exibirMenu() {
     string op;
@@ -57,7 +57,7 @@ void TelaAgendamentos::telaCadastro() {
     getline(cin, descricao);
 
     // Chamando o método específico do controller
-    controlador.criar_agendamento(data, horario, descricao);
+    controlador_agendamento.criar_agendamento(data, horario, descricao);
 
     cout << "Realizar outro cadastro?\n";
     cout << "[1] Sim\n[2] Não\n";
@@ -72,7 +72,7 @@ void TelaAgendamentos::telaCadastro() {
 
 void TelaAgendamentos::telaListagem() {
     system("cls");
-    vector<AgendamentosModel> vetor = controlador.listar();
+    vector<AgendamentosModel> vetor = controlador_agendamento.listar();
     string op;
 
     cout << "----- AGENDAMENTOS CADASTRADOS -----\n\n";
@@ -100,7 +100,7 @@ void TelaAgendamentos::telaDeletar() {
     cout << "Digite o ID do agendamento que deseja deletar: ";
     getline(cin, id);
     int _id = stoi(id);
-    auto agendamento = controlador.buscar(_id);
+    auto agendamento = controlador_agendamento.buscar(_id);
 
     cout << "\nDeletar: "
          << "ID: " << agendamento.pegar_id_agendamento()
@@ -112,7 +112,7 @@ void TelaAgendamentos::telaDeletar() {
     getline(cin, op);
 
     if (op == "1") {
-        controlador.deletar(_id);
+        controlador_agendamento.deletar(_id);
         cout << "Agendamento deletado.";
     } else {
         exibirMenu();
@@ -128,7 +128,7 @@ void TelaAgendamentos::telaEditar() {
     cout << "Digite o ID do agendamento que deseja editar: ";
     getline(cin, id);
     int _id = stoi(id);
-    auto agendamento = controlador.buscar(_id);
+    auto agendamento = controlador_agendamento.buscar(_id);
 
     cout << "\nEditar: "
          << "ID: " << agendamento.pegar_id_agendamento()
@@ -151,7 +151,7 @@ void TelaAgendamentos::telaEditar() {
     agendamento.alterar_descricao(descricao);
 
     if (op == "1") {
-        controlador.editar(_id, agendamento);
+        controlador_agendamento.editar(_id, agendamento);
         cout << "Agendamento editado.";
     } else {
         exibirMenu();

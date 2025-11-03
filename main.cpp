@@ -1,11 +1,7 @@
-#include "controller/ClientesController.h"
-#include <iostream>
+#include "view/TelaInicial.h"
 
 int main() {
-    ClientesController clientesCtrl;
-
-    std::cout << "Teste de listar clientes:\n";
-    clientesCtrl.listar();
-
+    TelaInicial tela;
+    tela.exibirMenu();
     return 0;
 }

@@ -65,7 +65,6 @@ ClientesModel ClientesRepository::buscarId(int _id) {
     garantirArquivo();
     ifstream in(this->arquivo);
     string linha;
-    bool encontrado = false;
 
     while (getline(in, linha)) {
         stringstream ss(linha);
@@ -75,20 +74,16 @@ ClientesModel ClientesRepository::buscarId(int _id) {
         getline(ss, nome, ',');
         getline(ss, cpf, ',');
 
-        if (!idStr.empty()) {
-            int id = stoi(idStr);
-            if (id == _id) {
-                return ClientesModel(nome, cpf, id);
-                encontrado = true;
-            }
+        if (!idStr.empty() && stoi(idStr) == _id) {
+            in.close();
+            return ClientesModel(nome, cpf, _id);  // retorna imediatamente
         }
-    }
-    if (!encontrado) {
-        throw runtime_error("\nCliente com o ID informado não encontrado.");
     }
 
     in.close();
+    throw runtime_error("\nCliente com o ID informado não encontrado."); // garante que sempre ou retorna ou lança
 }
+
 
 void ClientesRepository::deletar(int _id) {
     garantirArquivo();

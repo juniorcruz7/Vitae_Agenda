@@ -7,17 +7,17 @@ using namespace std;
 class AgendamentosModel {
 
 private:
-
-    static int id_agendamento;
     string data, horario, descricao;
 
 public:
+    int id_agendamento;
 
-    AgendamentosModel();
-    AgendamentosModel(string data, string horario, string descricao, int id_agendamento);
+    AgendamentosModel(): data(""), horario(""), descricao(""), id_agendamento(0) {}
+    AgendamentosModel(string data, string horario, string descricao, int id_agendamento):
+        data(data), horario(horario), descricao(descricao), id_agendamento(id_agendamento) {};
     ~AgendamentosModel();
 
-    static int pegar_id_agendamento();
+    int pegar_id_agendamento() const;
     string pegar_data() const;
     string pegar_horario() const;
     string pegar_descricao() const;

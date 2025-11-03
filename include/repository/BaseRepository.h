@@ -5,7 +5,7 @@
 template <typename T>
 class BaseRepository {
 protected:
-    std::string arquivo;
+    std::string arquivo;    
 
 public:
     BaseRepository(const std::string& nomeArquivo) : arquivo(nomeArquivo) {}

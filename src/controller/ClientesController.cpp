@@ -2,29 +2,29 @@
 #include "model/ClientesModel.h"
 #include "repository/ClientesRepository.h"
 
-extern ClientesRepository repositorio;
+ClientesRepository repoCliente;
 
 using namespace std;
 ClientesController::ClientesController() {}
 
 void ClientesController::cadastrar( ClientesModel& item) {
-    repositorio.salvar(item);
+    repoCliente.salvar(item);
 }
 
 void ClientesController::editar(int id, const ClientesModel& itemEditado) {
-    repositorio.editar(id, itemEditado);
+    repoCliente.editar(id, itemEditado);
 }
 
 void ClientesController::deletar(int id) {
-    repositorio.deletar(id);
+    repoCliente.deletar(id);
 }
 
 ClientesModel ClientesController::buscar(int id) {
-    return repositorio.buscarId(id);
+    return repoCliente.buscarId(id);
 }
 
 vector<ClientesModel> ClientesController::listar() {
-    return repositorio.listar();
+    return repoCliente.listar();
 }
 
 ClientesModel ClientesController::buscarID(int id) {

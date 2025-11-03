@@ -6,10 +6,16 @@
 
 using namespace std;
 
-AgendamentosRepository::AgendamentosRepository(const string& nomeArquivo)
-    : BaseRepository<AgendamentosModel>(nomeArquivo) // inicializa a base
-{
-    listar();
+AgendamentosRepository::AgendamentosRepository() : BaseRepository<AgendamentosModel>("data/agendamentos.txt"), proximo_id(0) {
+    garantirArquivo();
+
+    // Inicializa o próximo ID com base no maior ID existente no arquivo
+    vector<AgendamentosModel> agendamentosExistentes = listar(); 
+    if (agendamentosExistentes.empty()) {
+        proximo_id = 0;
+    } else {
+        proximo_id = agendamentosExistentes.back().pegar_id_agendamento(); 
+    }
 }
 
 

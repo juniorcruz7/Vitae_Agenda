@@ -8,7 +8,7 @@
 
 using namespace std;
 
-ClientesController controlador;
+ClientesController controladorClientes;
 
 
 void TelaClientes::exibirMenu() {
@@ -27,6 +27,7 @@ void TelaClientes::exibirMenu() {
 
         cout << "[0] Voltar\n";
 
+        cout << "\nOpcao: ";
         getline(cin, op);
 
         if (op == "1") {
@@ -50,14 +51,14 @@ void TelaClientes::telaCadastro() {
     string op;
 
     cout << "----- CADASTRO DE CLIENTES -----\n\n";
-    cout << "Digite o nome do cliente: \n";
+    cout << "Digite o nome do cliente: ";
     getline(cin,nome);
-    cout << "\nDigite o CPF do cliente: \n";
+    cout << "Digite o CPF do cliente: ";
     getline(cin,cpf);
     
-    controlador.cadastrarCliente(nome,cpf);
+    controladorClientes.cadastrarCliente(nome,cpf);
 
-    cout << "Realizar outro cadastro?\n";
+    cout << "\nRealizar outro cadastro?\n";
     cout << "[1] Sim\n";
     cout << "[2] Nao\n";
 
@@ -73,7 +74,7 @@ void TelaClientes::telaCadastro() {
 
 void TelaClientes::telaListagem() {
     system("cls");
-    vector <ClientesModel> vetor = controlador.listar();
+    vector <ClientesModel> vetor = controladorClientes.listar();
     string op;
     
     cout << "----- CLIENTES CADASTRADOS -----\n\n";
@@ -81,17 +82,10 @@ void TelaClientes::telaListagem() {
     for (const auto& lista : vetor) {
         cout << "ID: " << lista.pegarId() 
              << ", Nome: " << lista.pegarNome() 
-             << ", CPF: " << lista.pegarCpf() << "\n";
+             << ", CPF: " << lista.pegarCpf() << "\n\n";
     }
-
-    cout << "[0] Voltar\n";
-
-    cout << "\nOpcao: ";
-    getline(cin, op);
-
-    if (op == "0") {
-        exibirMenu();
-    }
+    system("pause");
+    exibirMenu();
 }
 
 void TelaClientes::telaDeletar() {
@@ -106,18 +100,18 @@ void TelaClientes::telaDeletar() {
     int _id = stoi(id);
 
     if (_id > ClientesModel::pegarNumClientes()) {
-        cout << "ID inexistente. Tente novamente.\n";
-        system("pause=null");
+        cout << "\nID inexistente. Tente novamente.\n\n";
+        system("pause");
         telaDeletar();
         return;
     }
 
-    auto cliente = controlador.buscarID(_id);
+    auto cliente = controladorClientes.buscarID(_id);
 
     cout << "\nDeletar: ";
     cout << "ID: " << cliente.pegarId() 
          << ", Nome: " << cliente.pegarNome() 
-         << ", CPF: " << cliente.pegarCpf() << "?\n";
+         << ", CPF: " << cliente.pegarCpf() << "?\n\n";
     
     cout << "[1] Sim\n";
     cout << "[2] Nao\n";
@@ -126,8 +120,10 @@ void TelaClientes::telaDeletar() {
     getline(cin, op);
 
     if (op == "1") {
-        controlador.deletar(_id);
-        cout << "Cliente deletado.";
+        controladorClientes.deletar(_id);
+        cout << "Cliente deletado.\n\n";
+        system("pause");
+        exibirMenu();
     } else if (op == "2") {
         exibirMenu();
     }
@@ -146,13 +142,13 @@ void TelaClientes::telaEditar() {
     int _id = stoi(id);
 
     if (_id > ClientesModel::pegarNumClientes()) {
-        cout << "ID inexistente. Tente novamente.\n";
-        system("pause=null");
+        cout << "\nID inexistente. Tente novamente.\n\n";
+        system("pause");
         telaEditar();
         return;
     }
 
-    auto cliente = controlador.buscarID(_id);
+    auto cliente = controladorClientes.buscarID(_id);
 
     cout << "\nEditar: ";
     cout << "ID: " << cliente.pegarId() 
@@ -165,18 +161,21 @@ void TelaClientes::telaEditar() {
     cout << "\nOpcao: ";
     getline(cin, op);
 
-    cout << "\nNome: ";
-    getline(cin, nome);
-
-    cout << "\nCPF: ";
-    getline(cin, cpf);
-
-    cliente.alterarNome(nome);
-    cliente.alterarCpf(cpf);
-
     if (op == "1") {
-        controlador.editar(_id, cliente);
-        cout << "Cliente editado.";
+        cout << "\nDigite os novos dados do cliente:\n";
+        cout << "\nNome: ";
+        getline(cin, nome);
+
+        cout << "\nCPF: ";
+        getline(cin, cpf);
+
+        cliente.alterarNome(nome);
+        cliente.alterarCpf(cpf);
+
+        controladorClientes.editar(_id, cliente);
+        cout << "\nCliente editado.\n\n";
+        system("pause");
+        exibirMenu();
     } else if (op == "2") {
         exibirMenu();
     }

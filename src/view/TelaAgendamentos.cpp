@@ -2,13 +2,14 @@
 #include "view/TelaInicial.h"
 #include "controller/AgendamentosController.h"
 #include "model/AgendamentosModel.h"
+#include "repository/AgendamentosRepository.h"
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-AgendamentosController controlador_agendamento;
+AgendamentosController controladorAgendamentos;
 
 void TelaAgendamentos::exibirMenu() {
     string op;
@@ -23,8 +24,10 @@ void TelaAgendamentos::exibirMenu() {
         cout << "[2] Listar    Agendamentos\n";
         cout << "[3] Editar    Agendamento\n";
         cout << "[4] Deletar   Agendamento\n\n";
+        
         cout << "[0] Voltar\n";
 
+        cout << "\nOpcao: ";
         getline(cin, op);
 
         if (op == "1") {
@@ -37,7 +40,6 @@ void TelaAgendamentos::exibirMenu() {
             telaDeletar();
         } else if (op == "0") {
             telaInicial.exibirMenu();
-            break;
         }
 
     } while (!fim);
@@ -51,28 +53,30 @@ void TelaAgendamentos::telaCadastro() {
     cout << "----- CADASTRO DE AGENDAMENTO -----\n\n";
     cout << "Digite a data do agendamento: ";
     getline(cin, data);
-    cout << "Digite o horário: ";
+    cout << "Digite o horario: ";
     getline(cin, horario);
-    cout << "Digite a descrição: ";
+    cout << "Digite a descricao: ";
     getline(cin, descricao);
 
     // Chamando o método específico do controller
-    controlador_agendamento.criar_agendamento(data, horario, descricao);
+    controladorAgendamentos.criar_agendamento(data, horario, descricao);
 
-    cout << "Realizar outro cadastro?\n";
-    cout << "[1] Sim\n[2] Não\n";
+    cout << "\nRealizar outro agendamento?\n";
+    cout << "[1] Sim\n[2] Nao\n";
+
+    cout << "\nOpcao: ";
     getline(cin, op);
 
     if (op == "1") {
         telaCadastro();
-    } else {
+    } else if (op == "2") {
         exibirMenu();
     }
 }
 
 void TelaAgendamentos::telaListagem() {
     system("cls");
-    vector<AgendamentosModel> vetor = controlador_agendamento.listar();
+    vector<AgendamentosModel> vetor = controladorAgendamentos.listar();
     string op;
 
     cout << "----- AGENDAMENTOS CADASTRADOS -----\n\n";
@@ -84,12 +88,8 @@ void TelaAgendamentos::telaListagem() {
              << ", Descrição: " << agendamento.pegar_descricao() << "\n";
     }
 
-    cout << "[0] Voltar\n";
-    getline(cin, op);
-
-    if (op == "0") {
-        exibirMenu();
-    }
+    system("pause");
+    exibirMenu();
 }
 
 void TelaAgendamentos::telaDeletar() {
@@ -101,28 +101,23 @@ void TelaAgendamentos::telaDeletar() {
     getline(cin, id);
     int _id = stoi(id);
 
-    if (_id > AgendamentosModel::pegar_id_agendamento()) {
-        cout << "ID inexistente. Tente novamente.\n";
-        system("pause=null");
-        telaDeletar();
-        return;
-    }
-
-    auto agendamento = controlador_agendamento.buscar(_id);
+    auto agendamento = controladorAgendamentos.buscar(_id);
 
     cout << "\nDeletar: "
          << "ID: " << agendamento.pegar_id_agendamento()
          << ", Data: " << agendamento.pegar_data()
          << ", Horário: " << agendamento.pegar_horario()
-         << ", Descrição: " << agendamento.pegar_descricao() << "?\n";
+         << ", Descrição: " << agendamento.pegar_descricao() << "?\n\n";
 
-    cout << "[1] Sim\n[2] Não\n";
+    cout << "[1] Sim\n[2] Nao\n";
+
+    cout << "\nOpcao: ";
     getline(cin, op);
 
     if (op == "1") {
-        controlador_agendamento.deletar(_id);
+        controladorAgendamentos.deletar(_id);
         cout << "Agendamento deletado.";
-    } else {
+    } else if (op == "2") {
         exibirMenu();
     }
 }
@@ -137,38 +132,35 @@ void TelaAgendamentos::telaEditar() {
     getline(cin, id);
     int _id = stoi(id);
 
-    if (_id > AgendamentosModel::pegar_id_agendamento()) {
-        cout << "ID inexistente. Tente novamente.\n";
-        system("pause=null");
-        telaEditar();
-        return;
-    }
-
-    auto agendamento = controlador_agendamento.buscar(_id);
+    auto agendamento = controladorAgendamentos.buscar(_id);
 
     cout << "\nEditar: "
          << "ID: " << agendamento.pegar_id_agendamento()
          << ", Data: " << agendamento.pegar_data()
          << ", Horário: " << agendamento.pegar_horario()
-         << ", Descrição: " << agendamento.pegar_descricao() << "?\n";
+         << ", Descrição: " << agendamento.pegar_descricao() << "?\n\n";
 
-    cout << "[1] Sim\n[2] Não\n";
+    cout << "[1] Sim\n[2] Nao\n";
+
+    cout << "\nOpcao: ";
     getline(cin, op);
 
-    cout << "Nova data: ";
-    getline(cin, data);
-    cout << "Novo horário: ";
-    getline(cin, horario);
-    cout << "Nova descrição: ";
-    getline(cin, descricao);
-
-    agendamento.alterar_data(data);
-    agendamento.alterar_horario(horario);
-    agendamento.alterar_descricao(descricao);
-
     if (op == "1") {
-        controlador_agendamento.editar(_id, agendamento);
-        cout << "Agendamento editado.";
+        cout << "Nova data: ";
+        getline(cin, data);
+        cout << "Novo horário: ";
+        getline(cin, horario);
+        cout << "Nova descrição: ";
+        getline(cin, descricao);
+
+        agendamento.alterar_data(data);
+        agendamento.alterar_horario(horario);
+        agendamento.alterar_descricao(descricao);
+
+        controladorAgendamentos.editar(_id, agendamento);
+        cout << "Agendamento editado.\n\n";
+        system("pause");
+        exibirMenu();
     } else {
         exibirMenu();
     }

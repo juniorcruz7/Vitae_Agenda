@@ -3,26 +3,26 @@
 #include <vector>
 #include <string>
 
-AgendamentosRepository repositorio;
+AgendamentosRepository repoAgendamento;
 
 void AgendamentosController::cadastrar(AgendamentosModel& item) {
-    repositorio.salvar(item);
+    repoAgendamento.salvar(item);
 }
 
 void AgendamentosController::editar(int id, const AgendamentosModel& itemEditado) {
-    repositorio.editar(id, itemEditado);
+    repoAgendamento.editar(id, itemEditado);
 }
 
 void AgendamentosController::deletar(int id) {
-    repositorio.deletar(id);
+    repoAgendamento.deletar(id);
 }
 
 AgendamentosModel AgendamentosController::buscar(int id) {
-    return repositorio.buscarId(id);
+    return repoAgendamento.buscarId(id);
 }
 
 std::vector<AgendamentosModel> AgendamentosController::listar() {
-    return repositorio.listar();
+    return repoAgendamento.listar();
 }
 
 // Método específico

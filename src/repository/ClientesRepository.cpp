@@ -1,25 +1,30 @@
 #include "repository/ClientesRepository.h"
 #include "model/ClientesModel.h"
+#include <iostream>
 #include <fstream>
 #include <sstream>
 #include <filesystem>
 
 using namespace std;
 
-ClientesRepository::ClientesRepository(const string& nomeArquivo)
-    : BaseRepository<ClientesModel>(nomeArquivo) // inicializa a base
-{
-    listar();
+ClientesRepository::ClientesRepository() : BaseRepository<ClientesModel>("data/clientes.txt"), proximo_id(0) {
+    garantirArquivo();
+
+    // Inicializa o próximo ID com base no maior ID existente no arquivo
+    vector<ClientesModel> clientes = listar(); // 'listar' já chama garantirArquivo
+    if (clientes.empty()) {
+        proximo_id = 0;
+    } else {
+        proximo_id = clientes.back().pegarId(); 
+    }
 }
-
-
 
 void ClientesRepository::garantirArquivo() {
     if (!filesystem::exists("data")) {
             filesystem::create_directory("data");
         }
-    if (!filesystem::exists(this->arquivo)) {
-            ofstream out(this->arquivo);
+    if (!filesystem::exists(arquivo)) {
+            ofstream out(arquivo);
             out.close();
         }
 }

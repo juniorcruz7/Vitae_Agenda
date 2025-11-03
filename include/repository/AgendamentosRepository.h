@@ -4,15 +4,16 @@
 #include <vector>
 #include <string>
 
+using namespace std;
+
 class AgendamentosRepository : public BaseRepository<AgendamentosModel> {
 private:
     int proximo_id;
-    std::vector<AgendamentosModel> agendamentos;
-    std::string arquivo;
-
+    vector<AgendamentosModel> agendamentos;
 
 public:
-    AgendamentosRepository(const std::string& nomeArquivo = "data/agendamentos.txt");
+    AgendamentosRepository();
+
     void garantirArquivo() override;
     void salvar(AgendamentosModel& agendamento) override; 
     void editar(int id, const AgendamentosModel& agendamento) override;

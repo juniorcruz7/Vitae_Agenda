@@ -4,25 +4,11 @@
 
 using namespace std;
 
-AgendamentosModel::AgendamentosModel() {
-    data = "";
-    horario = "";
-    descricao = "";
-    id_agendamento = 0;
-}
-
-AgendamentosModel::AgendamentosModel(string data, string horario, string descricao, int id_agendamento) {
-    this->data = data;
-    this->horario = horario;
-    this->descricao = descricao;
-    this->id_agendamento = id_agendamento;
-}
-
 AgendamentosModel::~AgendamentosModel() {
 
 }
 
-int AgendamentosModel::pegar_id_agendamento() {
+int AgendamentosModel::pegar_id_agendamento() const {
     return id_agendamento;
 }
 

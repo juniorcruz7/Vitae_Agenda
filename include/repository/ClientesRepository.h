@@ -9,7 +9,8 @@ private:
     int proximo_id; 
 
 public:
-    ClientesRepository(const std::string& nomeArquivo = "data/clientes.txt");
+
+    ClientesRepository();
 
     void garantirArquivo() override;
     void salvar(ClientesModel& cliente) override;

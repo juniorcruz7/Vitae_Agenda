@@ -81,7 +81,7 @@ ClientesModel ClientesRepository::buscarId(int _id) {
     }
 
     in.close();
-    throw runtime_error("\nCliente com o ID informado não encontrado."); // garante que sempre ou retorna ou lança
+    
 }
 
 

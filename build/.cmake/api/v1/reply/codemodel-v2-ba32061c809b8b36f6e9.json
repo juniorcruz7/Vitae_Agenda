@@ -10,7 +10,7 @@
 					"jsonFile" : "directory-.-Debug-f6f22219c74102c3da70.json",
 					"minimumCMakeVersion" : 
 					{
-						"string" : "3.16"
+						"string" : "3.25"
 					},
 					"projectIndex" : 0,
 					"source" : ".",
@@ -40,7 +40,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "Vitae_Agenda::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-Vitae_Agenda-Debug-f1cfd9410cc69cb34ace.json",
+					"jsonFile" : "target-Vitae_Agenda-Debug-6525e99fdbbfbe7d1cac.json",
 					"name" : "Vitae_Agenda",
 					"projectIndex" : 0
 				}

@@ -85,12 +85,12 @@ clean: CMakeFiles/Vitae_Agenda.dir/clean
 CMakeFiles/Vitae_Agenda.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Built target Vitae_Agenda"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target Vitae_Agenda"
 .PHONY : CMakeFiles/Vitae_Agenda.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/Vitae_Agenda.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" 8
+	$(CMAKE_COMMAND) -E cmake_progress_start "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" 11
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/Vitae_Agenda.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" 0
 .PHONY : CMakeFiles/Vitae_Agenda.dir/rule
@@ -102,7 +102,7 @@ Vitae_Agenda: CMakeFiles/Vitae_Agenda.dir/rule
 # codegen rule for target.
 CMakeFiles/Vitae_Agenda.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8 "Finished codegen for target Vitae_Agenda"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Finished codegen for target Vitae_Agenda"
 .PHONY : CMakeFiles/Vitae_Agenda.dir/codegen
 
 # clean rule for target.

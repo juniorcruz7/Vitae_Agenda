@@ -15,6 +15,9 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/model/ClientesModel.cpp" "CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj" "gcc" "CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj.d"
   "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/AgendamentoRepository.cpp" "CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj" "gcc" "CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj.d"
   "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/ClientesRepository.cpp" "CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj" "gcc" "CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj.d"
+  "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaAgendamentos.cpp" "CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj" "gcc" "CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj.d"
+  "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaClientes.cpp" "CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj" "gcc" "CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj.d"
+  "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaInicial.cpp" "CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj" "gcc" "CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -41,3 +41,7 @@ void ClientesModel::alterarCpf(string _cpf) {
 void ClientesModel::definirId(int _id) {
     id = _id;
 }
+
+int ClientesModel::pegarNumClientes() {
+            return numClientes;
+        }

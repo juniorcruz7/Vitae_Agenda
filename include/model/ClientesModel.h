@@ -26,4 +26,5 @@ class ClientesModel {
 
         void definirId(int _id);
 
+        static int pegarNumClientes();
 };

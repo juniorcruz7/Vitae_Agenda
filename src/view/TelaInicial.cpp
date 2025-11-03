@@ -1,11 +1,14 @@
 #include "view/TelaInicial.h"
 #include "view/TelaClientes.h"
+#include "view/TelaAgendamentos.h"
 #include <iostream>
 
 using namespace std;
 
 void TelaInicial::exibirMenu() {
     TelaClientes telaclientes;
+    TelaAgendamentos telaagendamentos;
+
     int op;
 
     do {
@@ -27,7 +30,7 @@ void TelaInicial::exibirMenu() {
         if (op == 1) {
             telaclientes.exibirMenu();
         } else if (op == 2) {
-
+            telaagendamentos.exibirMenu();
         } else {
             exit(EXIT_SUCCESS);
         }

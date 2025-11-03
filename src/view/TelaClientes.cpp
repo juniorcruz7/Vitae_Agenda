@@ -59,8 +59,9 @@ void TelaClientes::telaCadastro() {
 
     cout << "Realizar outro cadastro?\n";
     cout << "[1] Sim\n";
-    cout << "[2] Não\n";
+    cout << "[2] Nao\n";
 
+    cout << "\nOpcao: ";
     getline(cin, op);
 
     if (op == "1") {
@@ -78,10 +79,14 @@ void TelaClientes::telaListagem() {
     cout << "----- CLIENTES CADASTRADOS -----\n\n";
 
     for (const auto& lista : vetor) {
-        cout << "ID: " << lista.pegarId() << ", Nome: " << lista.pegarNome() << ", CPF: " << lista.pegarCpf() << "\n";
+        cout << "ID: " << lista.pegarId() 
+             << ", Nome: " << lista.pegarNome() 
+             << ", CPF: " << lista.pegarCpf() << "\n";
     }
 
     cout << "[0] Voltar\n";
+
+    cout << "\nOpcao: ";
     getline(cin, op);
 
     if (op == "0") {
@@ -94,19 +99,30 @@ void TelaClientes::telaDeletar() {
     string id, op;
 
     cout << "----- DELETAR CLIENTES -----\n\n";
-    cout << "Digite o ID de quem você deseja deletar: \n";
+    cout << "Digite o ID de quem voce deseja deletar: \n";
 
     getline(cin, id);
 
     int _id = stoi(id);
+
+    if (_id > ClientesModel::pegarNumClientes()) {
+        cout << "ID inexistente. Tente novamente.\n";
+        system("pause");
+        telaDeletar();
+        return;
+    }
+
     auto cliente = controlador.buscarID(_id);
 
     cout << "\nDeletar: ";
-    cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "?\n";
+    cout << "ID: " << cliente.pegarId() 
+         << ", Nome: " << cliente.pegarNome() 
+         << ", CPF: " << cliente.pegarCpf() << "?\n";
     
     cout << "[1] Sim\n";
-    cout << "[2] Não\n";
+    cout << "[2] Nao\n";
 
+    cout << "\nOpcao: ";
     getline(cin, op);
 
     if (op == "1") {
@@ -123,21 +139,33 @@ void TelaClientes::telaEditar() {
     string nome, cpf;
 
     cout << "----- EDITAR CLIENTES -----\n\n";
-    cout << "Digite o ID do cliente que você deseja editar: \n";
+    cout << "Digite o ID do cliente que voce deseja editar: \n";
 
     getline(cin, id);
+
     int _id = stoi(id);
+
+    if (_id > ClientesModel::pegarNumClientes()) {
+        cout << "ID inexistente. Tente novamente.\n";
+        system("pause");
+        telaEditar();
+        return;
+    }
+
     auto cliente = controlador.buscarID(_id);
 
     cout << "\nEditar: ";
-    cout << "ID: " << cliente.pegarId() << ", Nome: " << cliente.pegarNome() << ", CPF: " << cliente.pegarCpf() << "?\n";
+    cout << "ID: " << cliente.pegarId() 
+         << ", Nome: " << cliente.pegarNome() 
+         << ", CPF: " << cliente.pegarCpf() << " ?\n";
 
     cout << "[1] Sim\n";
-    cout << "[2] Não\n";
+    cout << "[2] Nao\n";
 
+    cout << "\nOpcao: ";
     getline(cin, op);
 
-    cout << "Nome: ";
+    cout << "\nNome: ";
     getline(cin, nome);
 
     cout << "\nCPF: ";
@@ -148,7 +176,7 @@ void TelaClientes::telaEditar() {
 
     if (op == "1") {
         controlador.editar(_id, cliente);
-        cout << "Cliente deletado.";
+        cout << "Cliente editado.";
     } else if (op == "2") {
         exibirMenu();
     }

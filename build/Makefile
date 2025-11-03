@@ -297,6 +297,78 @@ src/repository/ClientesRepository.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.s
 .PHONY : src/repository/ClientesRepository.cpp.s
 
+src/view/TelaAgendamentos.obj: src/view/TelaAgendamentos.cpp.obj
+.PHONY : src/view/TelaAgendamentos.obj
+
+# target to build an object file
+src/view/TelaAgendamentos.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj
+.PHONY : src/view/TelaAgendamentos.cpp.obj
+
+src/view/TelaAgendamentos.i: src/view/TelaAgendamentos.cpp.i
+.PHONY : src/view/TelaAgendamentos.i
+
+# target to preprocess a source file
+src/view/TelaAgendamentos.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.i
+.PHONY : src/view/TelaAgendamentos.cpp.i
+
+src/view/TelaAgendamentos.s: src/view/TelaAgendamentos.cpp.s
+.PHONY : src/view/TelaAgendamentos.s
+
+# target to generate assembly for a file
+src/view/TelaAgendamentos.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.s
+.PHONY : src/view/TelaAgendamentos.cpp.s
+
+src/view/TelaClientes.obj: src/view/TelaClientes.cpp.obj
+.PHONY : src/view/TelaClientes.obj
+
+# target to build an object file
+src/view/TelaClientes.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj
+.PHONY : src/view/TelaClientes.cpp.obj
+
+src/view/TelaClientes.i: src/view/TelaClientes.cpp.i
+.PHONY : src/view/TelaClientes.i
+
+# target to preprocess a source file
+src/view/TelaClientes.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.i
+.PHONY : src/view/TelaClientes.cpp.i
+
+src/view/TelaClientes.s: src/view/TelaClientes.cpp.s
+.PHONY : src/view/TelaClientes.s
+
+# target to generate assembly for a file
+src/view/TelaClientes.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.s
+.PHONY : src/view/TelaClientes.cpp.s
+
+src/view/TelaInicial.obj: src/view/TelaInicial.cpp.obj
+.PHONY : src/view/TelaInicial.obj
+
+# target to build an object file
+src/view/TelaInicial.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj
+.PHONY : src/view/TelaInicial.cpp.obj
+
+src/view/TelaInicial.i: src/view/TelaInicial.cpp.i
+.PHONY : src/view/TelaInicial.i
+
+# target to preprocess a source file
+src/view/TelaInicial.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.i
+.PHONY : src/view/TelaInicial.cpp.i
+
+src/view/TelaInicial.s: src/view/TelaInicial.cpp.s
+.PHONY : src/view/TelaInicial.s
+
+# target to generate assembly for a file
+src/view/TelaInicial.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Vitae_Agenda.dir/build.make CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.s
+.PHONY : src/view/TelaInicial.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -327,6 +399,15 @@ help:
 	@echo "... src/repository/ClientesRepository.obj"
 	@echo "... src/repository/ClientesRepository.i"
 	@echo "... src/repository/ClientesRepository.s"
+	@echo "... src/view/TelaAgendamentos.obj"
+	@echo "... src/view/TelaAgendamentos.i"
+	@echo "... src/view/TelaAgendamentos.s"
+	@echo "... src/view/TelaClientes.obj"
+	@echo "... src/view/TelaClientes.i"
+	@echo "... src/view/TelaClientes.s"
+	@echo "... src/view/TelaInicial.obj"
+	@echo "... src/view/TelaInicial.i"
+	@echo "... src/view/TelaInicial.s"
 .PHONY : help
 
 

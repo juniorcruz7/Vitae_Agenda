@@ -72,11 +72,26 @@ include CMakeFiles/Vitae_Agenda.dir/flags.make
 CMakeFiles/Vitae_Agenda.dir/codegen:
 .PHONY : CMakeFiles/Vitae_Agenda.dir/codegen
 
+CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: CMakeFiles/Vitae_Agenda.dir/flags.make
+CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
+CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp
+CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vitae_Agenda.dir/main.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/main.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/main.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/main.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp"
+
+CMakeFiles/Vitae_Agenda.dir/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Vitae_Agenda.dir/main.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp" > CMakeFiles/Vitae_Agenda.dir/main.cpp.i
+
+CMakeFiles/Vitae_Agenda.dir/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Vitae_Agenda.dir/main.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp" -o CMakeFiles/Vitae_Agenda.dir/main.cpp.s
+
 CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj: CMakeFiles/Vitae_Agenda.dir/flags.make
 CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
 CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/AgendamentoController.cpp
 CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/AgendamentoController.cpp"
 
 CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.i: cmake_force
@@ -91,7 +106,7 @@ CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj: CMakeFile
 CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
 CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/ClientesController.cpp
 CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/ClientesController.cpp"
 
 CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.i: cmake_force
@@ -106,7 +121,7 @@ CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj: CMakeFiles/Vitae
 CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
 CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/model/AgendamentoModel.cpp
 CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/model/AgendamentoModel.cpp"
 
 CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.i: cmake_force
@@ -121,7 +136,7 @@ CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj: CMakeFiles/Vitae_Ag
 CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
 CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/model/ClientesModel.cpp
 CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/model/ClientesModel.cpp"
 
 CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.i: cmake_force
@@ -136,7 +151,7 @@ CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj: CMakeF
 CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
 CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/AgendamentoRepository.cpp
 CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/AgendamentoRepository.cpp"
 
 CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.i: cmake_force
@@ -151,7 +166,7 @@ CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj: CMakeFile
 CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
 CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/ClientesRepository.cpp
 CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/ClientesRepository.cpp"
 
 CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.i: cmake_force
@@ -162,45 +177,81 @@ CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.s"
 	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/ClientesRepository.cpp" -o CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.s
 
-CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: CMakeFiles/Vitae_Agenda.dir/flags.make
-CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
-CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp
-CMakeFiles/Vitae_Agenda.dir/main.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Vitae_Agenda.dir/main.cpp.obj"
-	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/main.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/main.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/main.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp"
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj: CMakeFiles/Vitae_Agenda.dir/flags.make
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaAgendamentos.cpp
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaAgendamentos.cpp"
 
-CMakeFiles/Vitae_Agenda.dir/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Vitae_Agenda.dir/main.cpp.i"
-	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp" > CMakeFiles/Vitae_Agenda.dir/main.cpp.i
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaAgendamentos.cpp" > CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.i
 
-CMakeFiles/Vitae_Agenda.dir/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Vitae_Agenda.dir/main.cpp.s"
-	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp" -o CMakeFiles/Vitae_Agenda.dir/main.cpp.s
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaAgendamentos.cpp" -o CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.s
+
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj: CMakeFiles/Vitae_Agenda.dir/flags.make
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaClientes.cpp
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaClientes.cpp"
+
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaClientes.cpp" > CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.i
+
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaClientes.cpp" -o CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.s
+
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj: CMakeFiles/Vitae_Agenda.dir/flags.make
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj: CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaInicial.cpp
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj: CMakeFiles/Vitae_Agenda.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj -MF CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj.d -o CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj -c "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaInicial.cpp"
+
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.i"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaInicial.cpp" > CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.i
+
+CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.s"
+	C:/msys64/mingw64/bin/g++.exe $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaInicial.cpp" -o CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.s
 
 # Object files for target Vitae_Agenda
 Vitae_Agenda_OBJECTS = \
+"CMakeFiles/Vitae_Agenda.dir/main.cpp.obj" \
 "CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj" \
 "CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj" \
 "CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj" \
 "CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj" \
 "CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj" \
 "CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj" \
-"CMakeFiles/Vitae_Agenda.dir/main.cpp.obj"
+"CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj" \
+"CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj" \
+"CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj"
 
 # External object files for target Vitae_Agenda
 Vitae_Agenda_EXTERNAL_OBJECTS =
 
+Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/main.cpp.obj
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj
-Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/main.cpp.obj
+Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj
+Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj
+Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/build.make
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/linkLibs.rsp
 Vitae_Agenda.exe: CMakeFiles/Vitae_Agenda.dir/objects1.rsp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Linking CXX executable Vitae_Agenda.exe"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir="C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable Vitae_Agenda.exe"
 	"C:/Program Files/CMake/bin/cmake.exe" -E rm -f CMakeFiles/Vitae_Agenda.dir/objects.a
 	C:/msys64/mingw64/bin/ar.exe qc CMakeFiles/Vitae_Agenda.dir/objects.a @CMakeFiles/Vitae_Agenda.dir/objects1.rsp
 	C:/msys64/mingw64/bin/g++.exe -g -Wl,--whole-archive CMakeFiles/Vitae_Agenda.dir/objects.a -Wl,--no-whole-archive -o Vitae_Agenda.exe -Wl,--out-implib,libVitae_Agenda.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles/Vitae_Agenda.dir/linkLibs.rsp

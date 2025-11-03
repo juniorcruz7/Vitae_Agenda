@@ -22,7 +22,7 @@ AgendamentosModel::~AgendamentosModel() {
 
 }
 
-int AgendamentosModel::pegar_id_agendamento() const {
+int AgendamentosModel::pegar_id_agendamento() {
     return id_agendamento;
 }
 

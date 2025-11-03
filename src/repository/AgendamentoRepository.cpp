@@ -9,11 +9,8 @@ using namespace std;
 AgendamentosRepository::AgendamentosRepository(const string& nomeArquivo)
     : BaseRepository<AgendamentosModel>(nomeArquivo) // inicializa a base
 {
-    // Aqui você pode chamar listar ou outras inicializações se necessário
     listar();
 }
-
-
 
 
 void AgendamentosRepository::garantirArquivo() {

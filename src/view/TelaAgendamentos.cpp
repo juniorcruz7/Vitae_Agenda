@@ -100,6 +100,14 @@ void TelaAgendamentos::telaDeletar() {
     cout << "Digite o ID do agendamento que deseja deletar: ";
     getline(cin, id);
     int _id = stoi(id);
+
+    if (_id > AgendamentosModel::pegar_id_agendamento()) {
+        cout << "ID inexistente. Tente novamente.\n";
+        system("pause=null");
+        telaDeletar();
+        return;
+    }
+
     auto agendamento = controlador_agendamento.buscar(_id);
 
     cout << "\nDeletar: "
@@ -128,6 +136,14 @@ void TelaAgendamentos::telaEditar() {
     cout << "Digite o ID do agendamento que deseja editar: ";
     getline(cin, id);
     int _id = stoi(id);
+
+    if (_id > AgendamentosModel::pegar_id_agendamento()) {
+        cout << "ID inexistente. Tente novamente.\n";
+        system("pause=null");
+        telaEditar();
+        return;
+    }
+
     auto agendamento = controlador_agendamento.buscar(_id);
 
     cout << "\nEditar: "

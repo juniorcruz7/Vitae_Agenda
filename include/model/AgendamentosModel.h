@@ -8,7 +8,7 @@ class AgendamentosModel {
 
 private:
 
-    int id_agendamento;
+    static int id_agendamento;
     string data, horario, descricao;
 
 public:
@@ -17,7 +17,7 @@ public:
     AgendamentosModel(string data, string horario, string descricao, int id_agendamento);
     ~AgendamentosModel();
 
-    int pegar_id_agendamento() const;
+    static int pegar_id_agendamento();
     string pegar_data() const;
     string pegar_horario() const;
     string pegar_descricao() const;

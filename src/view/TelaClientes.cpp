@@ -107,7 +107,7 @@ void TelaClientes::telaDeletar() {
 
     if (_id > ClientesModel::pegarNumClientes()) {
         cout << "ID inexistente. Tente novamente.\n";
-        system("pause");
+        system("pause=null");
         telaDeletar();
         return;
     }
@@ -147,7 +147,7 @@ void TelaClientes::telaEditar() {
 
     if (_id > ClientesModel::pegarNumClientes()) {
         cout << "ID inexistente. Tente novamente.\n";
-        system("pause");
+        system("pause=null");
         telaEditar();
         return;
     }

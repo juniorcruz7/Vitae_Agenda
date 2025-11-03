@@ -1,14 +1,10 @@
 #pragma once
 
-class _TelaClientes {
-    public:
+class TelaAgendamentos {
+public:
     void exibirMenu();
-
     void telaCadastro();
-
     void telaListagem();
-
-    void telaDeletar();
-
     void telaEditar();
+    void telaDeletar();
 };

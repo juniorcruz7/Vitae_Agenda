@@ -1,7 +1,7 @@
 #pragma once
-#include "_TelaInicial.h"
+#include "TelaInicial.h"
 
-class _TelaInicial {
+class TelaInicial {
 public:
     void exibirMenu();
 };

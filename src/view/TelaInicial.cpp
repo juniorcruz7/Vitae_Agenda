@@ -1,10 +1,10 @@
-#include "view/_TelaInicial.h"
+#include "view/TelaInicial.h"
 #include <iostream>
 using namespace std;
 
 
 
-void _TelaInicial::exibirMenu() {
+void TelaInicial::exibirMenu() {
     int op;
 
     do {

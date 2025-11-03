@@ -1,5 +1,5 @@
 #include "view/_TelaClientes.h"
-#include "view/_TelaInicial.h"
+#include "view/TelaInicial.h"
 #include "controller/ClientesController.h"
 #include "model/ClientesModel.h"
 #include <iostream>
@@ -13,7 +13,7 @@ ClientesController controlador;
 
 void _TelaClientes::exibirMenu() {
     string op;
-    _TelaInicial telainicial;
+    TelaInicial telainicial;
     bool fim = false;
 
     do {

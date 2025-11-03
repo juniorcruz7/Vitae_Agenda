@@ -1,8 +1,7 @@
 #pragma once
-#include "TelaAgendamentos.h"
+#include "_TelaInicial.h"
 
 class _TelaAgendamentos {
 public:
-    _TelaAgendamentos tela;
-    tela.exibirMenu();
+    void exibirMenu();
 };

@@ -5,8 +5,17 @@ using namespace std;
 
 int ClientesModel::numClientes = 0;
 
+ClientesModel::ClientesModel(string _nome, string _cpf)
+    : nome(_nome), cpf(_cpf) {
+    id = ++numClientes;
+}
+
 ClientesModel::ClientesModel(string _nome, string _cpf, int _id)
-    : nome(_nome), cpf(_cpf), id(_id) {}
+    : nome(_nome), cpf(_cpf), id(_id) {
+        if (_id > numClientes) {
+            numClientes = _id;
+        }
+    }
 
 
 int ClientesModel::pegarId()const{

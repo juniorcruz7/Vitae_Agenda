@@ -31,7 +31,7 @@ ClientesModel ClientesController::buscarID(int id) {
     return buscar(id);
 }
 
-void ClientesController::cadastrarCliente(const string& nome, const string& cpf, int id) {
-    ClientesModel cliente(nome, cpf, id);
+void ClientesController::cadastrarCliente(const string& nome, const string& cpf) {
+    ClientesModel cliente(nome, cpf);
     cadastrar(cliente);
 }

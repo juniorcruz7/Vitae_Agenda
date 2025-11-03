@@ -2,6 +2,7 @@
 #include <vector>
 
 template <typename T>
+
 class ControllerBase {
 protected:
     int proximo_id;

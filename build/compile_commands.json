@@ -1,0 +1,44 @@
+[
+{
+  "directory": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj -c \"C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/AgendamentoController.cpp\"",
+  "file": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/AgendamentoController.cpp",
+  "output": "CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj"
+},
+{
+  "directory": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj -c \"C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/ClientesController.cpp\"",
+  "file": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/ClientesController.cpp",
+  "output": "CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj"
+},
+{
+  "directory": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj -c \"C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/model/AgendamentoModel.cpp\"",
+  "file": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/model/AgendamentoModel.cpp",
+  "output": "CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj"
+},
+{
+  "directory": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj -c \"C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/model/ClientesModel.cpp\"",
+  "file": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/model/ClientesModel.cpp",
+  "output": "CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj"
+},
+{
+  "directory": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj -c \"C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/AgendamentoRepository.cpp\"",
+  "file": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/AgendamentoRepository.cpp",
+  "output": "CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj"
+},
+{
+  "directory": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj -c \"C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/ClientesRepository.cpp\"",
+  "file": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/ClientesRepository.cpp",
+  "output": "CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj"
+},
+{
+  "directory": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/build",
+  "command": "C:/msys64/mingw64/bin/g++.exe  @CMakeFiles/Vitae_Agenda.dir/includes_CXX.rsp -g -std=c++17 -o CMakeFiles/Vitae_Agenda.dir/main.cpp.obj -c \"C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp\"",
+  "file": "C:/Users/Vitor Lins/OneDrive/Desktop/Vitae_Agenda/main.cpp",
+  "output": "CMakeFiles/Vitae_Agenda.dir/main.cpp.obj"
+}
+]

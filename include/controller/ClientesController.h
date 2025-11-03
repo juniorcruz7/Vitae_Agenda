@@ -18,5 +18,5 @@ public:
     vector<ClientesModel> listar() override;
     ClientesModel buscarID(int id);
 
-    void cadastrarCliente(const std::string& nome, const std::string& cpf, int id);
+    void cadastrarCliente(const std::string& nome, const std::string& cpf);
 };

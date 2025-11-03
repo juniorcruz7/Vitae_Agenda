@@ -1,9 +1,14 @@
 #pragma once
-#include "_TelaInicial.h"
 
 class _TelaClientes {
-public:
+    public:
     void exibirMenu();
-private:
-    _TelaInicial tela;
+
+    void telaCadastro();
+
+    void telaListagem();
+
+    void telaDeletar();
+
+    void telaEditar();
 };

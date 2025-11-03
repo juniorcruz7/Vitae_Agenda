@@ -837,6 +837,7 @@ CMakeFiles/Vitae_Agenda.dir/src/repository/ClientesRepository.cpp.obj: C:/Users/
   C:/msys64/mingw64/include/c++/15.2.0/iomanip \
   C:/msys64/mingw64/include/c++/15.2.0/ios \
   C:/msys64/mingw64/include/c++/15.2.0/iosfwd \
+  C:/msys64/mingw64/include/c++/15.2.0/iostream \
   C:/msys64/mingw64/include/c++/15.2.0/istream \
   C:/msys64/mingw64/include/c++/15.2.0/limits \
   C:/msys64/mingw64/include/c++/15.2.0/locale \
@@ -915,6 +916,8 @@ CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj: C:/Users/Vitor\ L
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/AgendamentosController.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/BaseController.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/AgendamentosModel.h \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/AgendamentosRepository.h \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/BaseRepository.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/view/TelaAgendamentos.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/view/TelaInicial.h \
   C:/msys64/mingw64/include/_mingw.h \
@@ -1230,6 +1233,7 @@ CMakeFiles/Vitae_Agenda.dir/src/view/TelaClientes.cpp.obj: C:/Users/Vitor\ Lins/
   C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h
 
 CMakeFiles/Vitae_Agenda.dir/src/view/TelaInicial.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/view/TelaInicial.cpp \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/view/TelaAgendamentos.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/view/TelaClientes.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/view/TelaInicial.h \
   C:/msys64/mingw64/include/_mingw.h \

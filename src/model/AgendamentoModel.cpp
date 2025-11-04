@@ -8,6 +8,10 @@ AgendamentosModel::~AgendamentosModel() {
 
 }
 
+string AgendamentosModel::pegar_cliente() {
+    return nomeCliente;
+}
+
 int AgendamentosModel::pegar_id_agendamento() const {
     return id_agendamento;
 }

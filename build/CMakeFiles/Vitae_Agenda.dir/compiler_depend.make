@@ -8,6 +8,7 @@ CMakeFiles/Vitae_Agenda.dir/src/controller/AgendamentoController.cpp.obj: C:/Use
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/AgendamentosController.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/BaseController.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/AgendamentosModel.h \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/ClientesModel.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/AgendamentosRepository.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/BaseRepository.h \
   C:/msys64/mingw64/include/_mingw.h \
@@ -277,6 +278,7 @@ CMakeFiles/Vitae_Agenda.dir/src/controller/ClientesController.cpp.obj: C:/Users/
 
 CMakeFiles/Vitae_Agenda.dir/src/model/AgendamentoModel.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/model/AgendamentoModel.cpp \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/AgendamentosModel.h \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/ClientesModel.h \
   C:/msys64/mingw64/include/_mingw.h \
   C:/msys64/mingw64/include/_mingw_mac.h \
   C:/msys64/mingw64/include/_mingw_off_t.h \
@@ -530,6 +532,7 @@ CMakeFiles/Vitae_Agenda.dir/src/model/ClientesModel.cpp.obj: C:/Users/Vitor\ Lin
 
 CMakeFiles/Vitae_Agenda.dir/src/repository/AgendamentoRepository.cpp.obj: C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/repository/AgendamentoRepository.cpp \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/AgendamentosModel.h \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/ClientesModel.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/AgendamentosRepository.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/BaseRepository.h \
   C:/msys64/mingw64/include/_mingw.h \
@@ -916,8 +919,10 @@ CMakeFiles/Vitae_Agenda.dir/src/view/TelaAgendamentos.cpp.obj: C:/Users/Vitor\ L
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/AgendamentosController.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/BaseController.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/AgendamentosModel.h \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/ClientesModel.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/AgendamentosRepository.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/BaseRepository.h \
+  C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/ClientesRepository.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/view/TelaAgendamentos.h \
   C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/view/TelaInicial.h \
   C:/msys64/mingw64/include/_mingw.h \
@@ -1407,6 +1412,10 @@ C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/BaseContro
 
 C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/AgendamentosModel.h:
 
+C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/ClientesController.h:
+
+C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/ClientesModel.h:
+
 C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/BaseRepository.h:
 
 C:/msys64/mingw64/include/c++/15.2.0/bits/exception.h:
@@ -1728,10 +1737,6 @@ C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/15.2.0/include/syslimits.h:
 C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/model/AgendamentoModel.cpp:
 
 C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/src/controller/ClientesController.cpp:
-
-C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/model/ClientesModel.h:
-
-C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/controller/ClientesController.h:
 
 C:/Users/Vitor\ Lins/OneDrive/Desktop/Vitae_Agenda/include/repository/ClientesRepository.h:
 

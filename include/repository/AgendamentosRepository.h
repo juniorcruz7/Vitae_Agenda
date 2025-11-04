@@ -6,18 +6,18 @@
 
 using namespace std;
 
-class AgendamentosRepository : public BaseRepository<AgendamentosModel> {
+class AgendamentosRepository : public BaseRepository <AgendamentosModel> {
 private:
     int proximo_id;
-    vector<AgendamentosModel> agendamentos;
+    vector <AgendamentosModel> agendamentos;
 
 public:
     AgendamentosRepository();
 
     void garantirArquivo() override;
     void salvar(AgendamentosModel& agendamento) override; 
-    void editar(int id, const AgendamentosModel& agendamento) override;
+    void editar(int id, AgendamentosModel& agendamento);
     void deletar(int id) override;
     AgendamentosModel buscarId(int id) override;
-    std::vector<AgendamentosModel> listar() override;
+    vector <AgendamentosModel> listar() override;
 };

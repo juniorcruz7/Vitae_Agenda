@@ -18,10 +18,10 @@ public:
     AgendamentosController() = default;
 
     void cadastrar(AgendamentosModel& item) override;
-    void editar(int id, const AgendamentosModel& itemEditado) override;
+    void editar(int id, AgendamentosModel& itemEditado);
     void deletar(int id) override;
     AgendamentosModel buscar(int id) override;
     vector<AgendamentosModel> listar() override;
 
-    void criar_agendamento(const std::string& data, const std::string& horario, const std::string& descricao);
+    void criar_agendamento(string& nomeCliente, string& data, const string& horario, const string& descricao);
 };

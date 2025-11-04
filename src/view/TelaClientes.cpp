@@ -56,14 +56,14 @@ void TelaClientes::telaCadastro() {
     cout << "----- CADASTRO DE CLIENTES -----\n\n";
     
     // Coleta os dados do usuário
-    cout << "Digite o nome do cliente: ";
+    cout << "Digite o nome completo do cliente: ";
     getline(cin,nome);
     cout << "Digite o CPF do cliente: ";
     getline(cin,cpf);
     
     // Envia os dados para o controlador criar o cliente
     controladorClientes.cadastrarCliente(nome,cpf);
-
+    cout << "\nCliente cadastrado com sucesso!\n";
     // Pergunta se deseja cadastrar outro
     cout << "\nRealizar outro cadastro?\n";
     cout << "[1] Sim\n[2] Nao\n";

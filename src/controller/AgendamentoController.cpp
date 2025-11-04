@@ -1,7 +1,10 @@
 #include "controller/AgendamentosController.h"
 #include "repository/AgendamentosRepository.h"
+#include "model/ClientesModel.h"
 #include <vector>
 #include <string>
+
+using namespace std;
 
 AgendamentosRepository repoAgendamento;
 
@@ -9,7 +12,7 @@ void AgendamentosController::cadastrar(AgendamentosModel& item) {
     repoAgendamento.salvar(item);
 }
 
-void AgendamentosController::editar(int id, const AgendamentosModel& itemEditado) {
+void AgendamentosController::editar(int id, AgendamentosModel& itemEditado) {
     repoAgendamento.editar(id, itemEditado);
 }
 
@@ -26,7 +29,7 @@ std::vector<AgendamentosModel> AgendamentosController::listar() {
 }
 
 // Método específico
-void AgendamentosController::criar_agendamento(const std::string& data, const std::string& horario, const std::string& descricao) {
-    AgendamentosModel a(data, horario, descricao, 0);
+void AgendamentosController::criar_agendamento(string& nomeCliente, std::string& data, const std::string& horario, const std::string& descricao) {
+    AgendamentosModel a(nomeCliente, data, horario, descricao, 0);
     cadastrar(a);
 }

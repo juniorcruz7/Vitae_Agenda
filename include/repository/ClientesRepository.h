@@ -14,7 +14,7 @@ public:
 
     void garantirArquivo() override;
     void salvar(ClientesModel& cliente) override;
-    void editar(int id, const ClientesModel& clienteEditado) override;
+    void editar(int id, const ClientesModel& clienteEditado);
     void deletar(int id) override;
     ClientesModel buscarId(int id) override;
     std::vector<ClientesModel> listar() override;

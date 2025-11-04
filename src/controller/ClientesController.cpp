@@ -11,7 +11,7 @@ void ClientesController::cadastrar( ClientesModel& item) {
     repoCliente.salvar(item);
 }
 
-void ClientesController::editar(int id, const ClientesModel& itemEditado) {
+void ClientesController::editar(int id, ClientesModel& itemEditado) {
     repoCliente.editar(id, itemEditado);
 }
 

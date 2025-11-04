@@ -12,7 +12,7 @@ public:
     ClientesController();
 
     void cadastrar(ClientesModel& item) override;
-    void editar(int id, const ClientesModel& itemEditado) override;
+    void editar(int id, ClientesModel& itemEditado);
     void deletar(int id) override;
     ClientesModel buscar(int id) override;
     vector<ClientesModel> listar() override;

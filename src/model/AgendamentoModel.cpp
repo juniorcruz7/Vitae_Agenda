@@ -8,6 +8,8 @@ AgendamentosModel::~AgendamentosModel() {
 
 }
 
+// --- Getters (Métodos de acesso aos dados) ---
+
 string AgendamentosModel::pegar_cliente() {
     return nomeCliente;
 }
@@ -28,7 +30,10 @@ string AgendamentosModel::pegar_descricao() const {
     return descricao;
 }
 
+// --- Setters (Métodos de modificação dos dados) ---
+
 void AgendamentosModel::alterar_data(string data) {
+    // 'this->' é usado para diferenciar o parâmetro 'data' do membro da classe 'data'
     this->data = data;
 }
 

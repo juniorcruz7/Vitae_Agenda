@@ -1,34 +1,6 @@
 #pragma once
 #include <string>
 #include <iostream>
-<<<<<<< HEAD
-
-using namespace std;
-
-class AgendamentosModel {
-
-private:
-
-    int id_agendamento;
-    string data, horario, descricao;
-
-public:
-
-    AgendamentosModel();
-    AgendamentosModel(string _data, string _horario, string _descricao, int _id_agendamento);
-    ~AgendamentosModel();
-
-    int pegarId() const;
-    string pegarData() const;
-    string pegarHorario() const;
-    string pegarDescricao() const;
-
-    void alterarData(string data);
-    void alterarHorario(string horario);
-    void alterarDescricao(string descricao);
-
-};
-=======
 #include "model/ClientesModel.h" // Dependência (embora não pareça usada nos membros)
 
 using namespace std;
@@ -64,4 +36,3 @@ public:
     void definirId(int novoId) { id_agendamento = novoId; } // Setter inline
     int pegarId() const { return id_agendamento; } // Getter inline
 };
->>>>>>> agenda

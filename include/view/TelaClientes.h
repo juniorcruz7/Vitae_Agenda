@@ -3,17 +3,6 @@
 // Classe View: Define a tela de gerenciamento de Clientes.
 class TelaClientes {
     public:
-<<<<<<< HEAD
-    void exibirMenu();
-
-    void telaCadastro();
-
-    void telaListagem();
-
-    void telaDeletar();
-
-    void telaEditar();
-=======
     // Funções que exibem as diferentes "telas" (menus) para o usuário.
     void exibirMenu(); // Menu principal (Cadastrar, Listar, etc.)
 
@@ -24,5 +13,4 @@ class TelaClientes {
     void telaDeletar(); // Tela para remover um cliente
     
     void telaEditar(); // Tela para modificar um cliente
->>>>>>> agenda
 };

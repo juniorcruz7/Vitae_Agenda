@@ -1,26 +1,16 @@
 #include "view/TelaAgendamentos.h"
 #include "view/TelaInicial.h"
 #include "controller/AgendamentosController.h"
-<<<<<<< HEAD
-=======
 #include "model/AgendamentosModel.h"
 #include "repository/AgendamentosRepository.h"
 #include "model/ClientesModel.h"
 #include "repository/ClientesRepository.h"
->>>>>>> agenda
 #include <iostream>
 #include <string>
 #include <vector>
 
 using namespace std;
 
-<<<<<<< HEAD
-AgendamentosController controlador;
-
-void TelaAgendamentos::exibirMenu() {
-    string op;
-    TelaInicial telainicial;
-=======
 // Instância do controlador para esta tela
 AgendamentosController controladorAgendamentos;
 ClientesRepository repositorioClientes;
@@ -29,26 +19,12 @@ ClientesRepository repositorioClientes;
 void TelaAgendamentos::exibirMenu() {
     string op;
     TelaInicial telaInicial;
->>>>>>> agenda
     bool fim = false;
 
     // Loop principal do menu
     do {
         system("cls"); // Limpa a tela
 
-<<<<<<< HEAD
-        cout << "----- CLIENTES -----\n\n";
-        cout << "[1] Cadastrar Clientes\n";
-        cout << "[2] Listar    Clientes\n";
-        cout << "[3] Editar    Clientes\n";
-        cout << "[4] Deletar   Clientes\n\n";
-
-        cout << "[0] Voltar\n";
-
-        cout << "Opcao: ";
-        getline(cin, op);
-
-=======
         // Exibe as opções
         cout << "----- AGENDAMENTOS -----\n\n";
         cout << "[1] Cadastrar \tAgendamento\n";
@@ -61,7 +37,6 @@ void TelaAgendamentos::exibirMenu() {
         getline(cin, op); // Captura a opção do usuário
 
         // Navega para a tela correspondente
->>>>>>> agenda
         if (op == "1") {
             telaCadastro();
         } else if (op == "2") {
@@ -71,54 +46,12 @@ void TelaAgendamentos::exibirMenu() {
         } else if (op == "4") {
             telaDeletar();
         } else if (op == "0") {
-<<<<<<< HEAD
-            telainicial.exibirMenu();
-=======
             telaInicial.exibirMenu(); // Volta para a tela anterior
->>>>>>> agenda
         }
 
     } while (!fim);
 }
 
-<<<<<<< HEAD
-void TelaAgendamentos::telaCadastro() {
-    system("cls");
-    string nome, cpf, op;
-
-    cout << "----- CADASTRO DE AGENDAMENTOS -----\n\n";
-    cout << "Digite o nome do cliente: \n";
-    getline(cin,nome);
-    cout << "\nDigite o CPF do cliente: \n";
-    getline(cin,cpf);
-    
-    //controlador.criar_agendamento();
-
-    cout << "Realizar outro cadastro?\n";
-    cout << "[1] Sim\n";
-    cout << "[0] Não\n";
-
-    cout << "Opcao: ";
-    getline(cin, op);
-
-    if (op == "1") {
-        telaCadastro();
-    } else if (op == "2") {
-        exibirMenu();
-    };
-}
-
-void TelaAgendamentos::telaListagem() {
-    // Implementacao da tela de listagem de agendamentos
-}
-
-void TelaAgendamentos::telaEditar() {
-    // Implementacao da tela de edicao de agendamentos
-}
-
-void TelaAgendamentos::telaDeletar() {
-    // Implementacao da tela de delecao de agendamentos
-=======
 // Tela de cadastro de novos agendamentos
 void TelaAgendamentos::telaCadastro() {
     system("cls");
@@ -285,5 +218,4 @@ void TelaAgendamentos::telaEditar() {
             exibirMenu();
         }
     }
->>>>>>> agenda
 }

@@ -3,25 +3,6 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-int ClientesModel::numClientes = 0;
-
-ClientesModel::ClientesModel(string _nome, string _cpf) {
-    this->id=++numClientes;
-    this->nome = _nome;
-    this->cpf = _cpf;
-}
-
-ClientesModel::ClientesModel(string _nome, string _cpf, int _id) {
-    this->id=_id;
-    this->nome=_nome;
-    this->cpf=_cpf;
-
-    if (_id > id) {
-        numClientes = _id;
-    }
-}
-=======
 // Inicializa a variável estática (contador global de clientes)
 int ClientesModel::numClientes = 0;
 
@@ -42,7 +23,6 @@ ClientesModel::ClientesModel(string _nome, string _cpf, int _id)
     }
 
 // --- Getters (Métodos de acesso) ---
->>>>>>> agenda
 
 int ClientesModel::pegarId()const{
     return id;

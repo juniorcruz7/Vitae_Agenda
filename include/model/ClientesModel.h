@@ -6,11 +6,6 @@ using namespace std;
 // Classe Model: representa a entidade 'Cliente' e armazena seus dados.
 class ClientesModel {
     private:
-<<<<<<< HEAD
-        string nome, cpf;
-        int id;
-        static int numClientes;
-=======
         // Dados do cliente
     string nome;
     string cpf;
@@ -18,7 +13,6 @@ class ClientesModel {
         // Variável estática: contador global para todos os objetos ClientesModel
     static int numClientes;
 
->>>>>>> agenda
     public:
         // Construtor padrão
         ClientesModel() {};
@@ -26,15 +20,10 @@ class ClientesModel {
         // Construtor para criar um novo cliente (provavelmente usado com auto-incremento de ID)
         ClientesModel (string _nome, string _cpf);
 
-<<<<<<< HEAD
-        ClientesModel (string _nome, string _cpf, int _id);
-
-=======
         // Construtor para carregar um cliente (quando o ID já existe)
         ClientesModel (string _nome, string _cpf, int _id);
 
         // --- Getters (Métodos de acesso) ---
->>>>>>> agenda
         int pegarId() const;
         string pegarNome() const;
         string pegarCpf() const;

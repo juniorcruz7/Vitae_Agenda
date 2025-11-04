@@ -1,19 +1,5 @@
 #pragma once
 
-<<<<<<< HEAD
-class TelaAgendamentos {
-    public:
-
-    void exibirMenu();
-
-    void telaCadastro();
-
-    void telaListagem();
-
-    void telaEditar();
-
-    void telaDeletar();
-=======
 // Classe View: Define a tela de gerenciamento de Agendamentos.
 class TelaAgendamentos {
     public:
@@ -27,5 +13,4 @@ class TelaAgendamentos {
     void telaEditar(); // Tela para modificar um agendamento
     
     void telaDeletar(); // Tela para remover um agendamento
->>>>>>> agenda
 };

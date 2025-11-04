@@ -1,31 +1,5 @@
 #include "repository/ClientesRepository.h"
 #include "model/ClientesModel.h"
-<<<<<<< HEAD
-#include <fstream>
-#include <sstream>
-#include <filesystem>
-
-using namespace std;
-
-ClientesRepository::ClientesRepository() : arquivo("data/clientes.txt") {
-
-}
-
-void ClientesRepository::garantirArquivo() {
-    if (!filesystem::exists("data")) {
-            filesystem::create_directory("data");
-        }
-    if (!filesystem::exists(arquivo)) {
-            ofstream out(arquivo);
-            out.close();
-        }
-}
-
-void ClientesRepository::salvar(const ClientesModel& cliente) {
-    garantirArquivo();
-    ofstream out(arquivo, ios::app);
-    out << cliente.pegarId() << "," << cliente.pegarNome() << "," << cliente.pegarCpf() << "\n";
-=======
 #include <iostream>
 #include <fstream> // Para manipulação de arquivos
 #include <sstream> // Para parsear (quebrar) strings
@@ -71,15 +45,11 @@ void ClientesRepository::salvar(ClientesModel& cliente) {
     out << cliente.pegarId() << ","
         << cliente.pegarNome() << ","
         << cliente.pegarCpf() << "\n";
->>>>>>> agenda
 
     out.close();
 }
 
-<<<<<<< HEAD
-=======
 // Lê o arquivo "clientes.txt" e retorna um vetor de ClientesModel
->>>>>>> agenda
 vector <ClientesModel> ClientesRepository::listar() {
     garantirArquivo();
     vector <ClientesModel> clientes;
@@ -120,53 +90,6 @@ ClientesModel ClientesRepository::buscarId(int _id) {
         getline(ss, nome, ',');
         getline(ss, cpf, ',');
 
-<<<<<<< HEAD
-        if (!idStr.empty())
-            clientes.emplace_back(nome, cpf, stoi(idStr));
-    }
-
-    in.close();
-    return clientes;
-}
-
-ClientesModel ClientesRepository::buscarId(int _id) {
-    garantirArquivo();
-    ifstream in(arquivo);
-    string linha;
-    bool encontrado = false;
-
-    while (getline(in, linha)) {
-        stringstream ss(linha);
-        string idStr, nome, cpf;
-
-        getline(ss, idStr, ',');
-        getline(ss, nome, ',');
-        getline(ss, cpf, ',');
-
-        if (!idStr.empty()) {
-            int id = stoi(idStr);
-            if (id == _id) {
-                return ClientesModel(nome, cpf, id);
-                encontrado = true;
-            }
-        }
-    }
-    if (!encontrado) {
-        throw runtime_error("\nCliente com o ID informado não encontrado.");
-    }
-
-    in.close();
-}
-
-void ClientesRepository::deletar(int _id) {
-    garantirArquivo();
-    ifstream in(arquivo);
-    
-    vector<string> linhas;
-    string linha;
-    bool encontrado = false;
-
-=======
 // Se encontrar o ID, constrói o objeto e o retorna imediatamente
         if (!idStr.empty() && stoi(idStr) == _id) {
             in.close();
@@ -188,7 +111,6 @@ void ClientesRepository::deletar(int _id) {
     bool encontrado = false;
 
 // Lê o arquivo e armazena apenas as linhas com ID diferente
->>>>>>> agenda
     while (getline(in, linha)) {
         stringstream ss(linha);
         string idStr, nome, cpf;
@@ -201,44 +123,24 @@ void ClientesRepository::deletar(int _id) {
             int id = stoi(idStr);
 
             if (id != _id) {
-<<<<<<< HEAD
-                linhas.push_back(linha);
-            } else {
-                encontrado = true;
-=======
                 linhas.push_back(linha); // Mantém a linha
             } else {
                 encontrado = true; // Marca que o ID foi encontrado (e pulado)
->>>>>>> agenda
             }
         }
     }
 
     in.close();
 
-<<<<<<< HEAD
-    ofstream out(arquivo, ios::trunc);
-=======
 // Abre o arquivo em modo 'trunc' (apaga o conteúdo anterior)
     ofstream out(this->arquivo, ios::trunc);
 // Reescreve o arquivo apenas com as linhas mantidas
->>>>>>> agenda
     for (const auto& l : linhas) {
         out << l << "\n";
     }
     out.close();
 }
 
-<<<<<<< HEAD
-void ClientesRepository::editar(int _id, ClientesModel clienteEditado) {
-    garantirArquivo();
-    ifstream in(arquivo);
-
-    vector <string> linhas;
-    string linha;
-    bool encontrado = false;
-
-=======
 // Edita um cliente no arquivo
 void ClientesRepository::editar(int _id, const ClientesModel& clienteEditado) {
     garantirArquivo();
@@ -249,7 +151,6 @@ void ClientesRepository::editar(int _id, const ClientesModel& clienteEditado) {
     bool encontrado = false;
 
 // Lê o arquivo
->>>>>>> agenda
     while (getline(in, linha)) {
         stringstream ss(linha);
         string idStr, nome, cpf;
@@ -261,18 +162,12 @@ void ClientesRepository::editar(int _id, const ClientesModel& clienteEditado) {
         if (!idStr.empty()) {
             int id = stoi(idStr);
             if (id == _id) {
-<<<<<<< HEAD
-=======
 // Se for o ID, formata a nova linha com os dados editados
->>>>>>> agenda
                 string novaLinha = to_string(clienteEditado.pegarId()) + "," + clienteEditado.pegarNome() + "," + clienteEditado.pegarCpf();
                 linhas.push_back(novaLinha);
                 encontrado = true;
             } else {
-<<<<<<< HEAD
-=======
 // Se não for o ID, adiciona a linha original
->>>>>>> agenda
                 linhas.push_back(linha);
             }
         }
@@ -280,13 +175,6 @@ void ClientesRepository::editar(int _id, const ClientesModel& clienteEditado) {
 
     in.close();
 
-<<<<<<< HEAD
-    ofstream out(arquivo, ios::trunc);
-    for (const auto& l : linhas) {
-        out << l << "\n";
-    }
-    out.close();      
-=======
 // Abre o arquivo em modo 'trunc' (apaga tudo)
     ofstream out(this->arquivo, ios::trunc);
 // Reescreve o arquivo com o vetor de linhas (antigas + modificada)
@@ -294,5 +182,4 @@ void ClientesRepository::editar(int _id, const ClientesModel& clienteEditado) {
         out << l << "\n";
     }
     out.close();
->>>>>>> agenda
 }

@@ -1,10 +1,6 @@
 #pragma once
-<<<<<<< HEAD
-
-=======
 #include "model/ClientesModel.h"
 #include "BaseRepository.h"
->>>>>>> agenda
 #include <vector>
 #include <string>
 
@@ -14,27 +10,6 @@ class ClientesRepository : public BaseRepository<ClientesModel> {
 private:
     int proximo_id; // Contador para gerar novos IDs
 
-<<<<<<< HEAD
-class ClientesModel;
-
-class ClientesRepository {
-    private:
-    string arquivo;
-    public:
-    ClientesRepository();
-
-    void garantirArquivo();
-
-    void salvar(const ClientesModel& cliente);
-
-    vector <ClientesModel> listar();
-    
-    ClientesModel buscarId(int _id);
-    
-    void deletar(int _id);
-
-    void editar (int _id, ClientesModel clienteEditado);
-=======
 public:
     ClientesRepository(); // Construtor
 
@@ -45,5 +20,4 @@ public:
     void deletar(int id) override; // Deleta um cliente
     ClientesModel buscarId(int id) override; // Busca um cliente pelo ID
     std::vector<ClientesModel> listar() override; // Lista todos os clientes
->>>>>>> agenda
 };

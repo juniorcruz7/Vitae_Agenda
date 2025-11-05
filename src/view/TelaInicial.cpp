@@ -1,14 +1,22 @@
-#include "include/view/TelaInicial.h"
+#include "view/TelaInicial.h"
+#include "view/TelaClientes.h" // Inclui a tela de clientes
+#include "view/TelaAgendamentos.h" // Inclui a tela de agendamentos
 #include <iostream>
 
 using namespace std;
 
+// Função principal da TelaInicial, serve como o ponto de entrada da navegação
 void TelaInicial::exibirMenu() {
-    int op;
+    // Cria instâncias das sub-telas que podem ser chamadas
+    TelaClientes telaclientes;
+    TelaAgendamentos telaagendamentos;
 
-    do { 
-        system("cls");
+    int op; // Variável para guardar a opção do usuário
 
+    do {
+        system("cls"); // Limpa o console
+
+// Imprime o cabeçalho e as opções do menu principal
         cout << "++++++++++++++++++++++++\n";
         cout << "----- VITAE AGENDA -----\n";
         cout << "++++++++++++++++++++++++\n\n";
@@ -20,14 +28,16 @@ void TelaInicial::exibirMenu() {
 
         cout << "Opcao: ";
 
-        cin >> op;
+        cin >> op; // Lê a opção (como inteiro)
 
-        switch (op) {
-            case 1:
-                //vai entrar na opção de clientes
-            case 2:
-                //vai entrar na opção de agendamentos
-            default:  // sai do programa
+        // Roteamento: decide para qual tela navegar
+        if (op == 1) {
+            telaclientes.exibirMenu(); // Chama o menu de clientes
+        } else if (op == 2) {
+            telaagendamentos.exibirMenu(); // Chama o menu de agendamentos
+        } else {
+        // Qualquer outra opção (incluindo 0) encerra o programa
+            exit(EXIT_SUCCESS); 
         }
-    } while(op =! 0);
+    } while(op != 0); // O loop continua (embora a lógica 'else' saia no 0)
 }

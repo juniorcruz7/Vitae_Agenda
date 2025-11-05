@@ -40,4 +40,8 @@ std::vector<AgendamentosModel> AgendamentosController::listar() {
 // --- Método auxiliar ---
 // Método chamado pela View para simplificar a criação de um agendamento
 void AgendamentosController::criar_agendamento(string& nomeCliente, std::string& data, const std::string& horario, const std::string& descricao) {
-    //
+    // 1. Cria o objeto Model com os dados da View (ID 0 indica "novo")
+    AgendamentosModel a(nomeCliente, data, horario, descricao, 0);
+    // 2. Chama o método de cadastro deste próprio controlador
+    cadastrar(a);
+}

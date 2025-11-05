@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VITAE AGENDA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="title">VITAE AGENDA</h1>
+        <p class="authors">
+            <a>Emanuel Terto de Farias</a>, 
+            <a>Guilherme de Siqueira Montenegro Albuquerque</a>, 
+            <a>João Vitor Lins Baracho</a>, 
+            <a>Severino João da Cruz Júnior</a>
+        </p>
+    </div>
+    <div class="section-buttons">
+        <a class="btn" href="https://drive.google.com/file/d/14iOFAtjj-vQAfRUqY9pP8bE8qFCia5t7/view?usp=drivesdk"><span>📄</span> Report</a>
+        <a class="btn" href="https://youtu.be/GxusLmNYCbY" target="_blank"><span>▶</span> Vídeo</a>
+        <a class="btn" href="https://github.com/juniorcruz7/Vitae_Agenda"><span>🐙</span> Code</a>
+        
+
+    </div>
+
+    <div class="introducion-section">
+        <h2>Introdução</h2>
+        <p>
+            Diante da crescente demanda por sistemas eficientes de gestão em consultórios médicos e outros serviços que dependem de agendamento de horários, desenvolvemos um aplicativo capaz de registrar clientes e organizar compromissos de forma dinâmica e prática. A solução proposta visa atender a uma necessidade real: controlar de maneira simples e ágil a disponibilidade de horários, garantindo que o processo de marcação seja fluido, confiável e de fácil uso tanto para os profissionais quanto para os clientes.
+
+Para isso, empregamos no desenvolvimento do módulo CRUD (Create, Read, Update e Delete) conceitos fundamentais da Programação Orientada a Objetos (POO), como encapsulamento, polimorfismo e herança. Esses princípios permitiram estruturar o código de forma modular, segura e reutilizável, facilitando futuras alterações e aprimoramentos. A utilização da POO tornou possível separar responsabilidades, criando classes específicas para representar clientes, agendamentos e demais elementos do sistema, resultando em um software mais robusto, organizado e de fácil manutenção.
+        </p>
+    </div>
+    
+<div class="concepts-section">
+    <h2>CONCEITOS UTILIZADOS</h2>
+
+    <ol>
+        <li>
+            <strong>Abstração:</strong> As classes do sistema utilizam apenas o essencial para cada funcionalidade, evitando complexidade desnecessária. As classes base (BaseController e BaseRepository) definem estruturas gerais, enquanto as classes derivadas especializam essas funções conforme o contexto (clientes, agendamentos etc.).
+        </li>
+
+        <li>
+            <strong>Herança:</strong> As classes ClientesController e AgendamentosController herdam métodos comuns da BaseController. O mesmo ocorre com os repositórios, onde ClientesRepository e AgendamentosRepository reutilizam funcionalidades definidas em BaseRepository.
+        </li>
+
+        <li>
+            <strong>Encapsulamento:</strong> Informações sensíveis, como CPF e dados pessoais, são protegidas dentro das classes. O acesso e modificação desses dados só são permitidos por meio de métodos específicos, garantindo segurança e consistência.
+        </li>
+
+        <li>
+            <strong>Polimorfismo:</strong> Métodos como cadastrar, editar, deletar e buscar, definidos na classe base, podem ser sobrescritos nas classes filhas para que cada uma implemente sua própria lógica, seja para clientes ou agendamentos.
+        </li>
+    </ol>
+</div>
+<div class="implement-section">
+    <h2>IMPLEMENTAÇÃO</h2>
+    <style>
+  li {
+    margin-bottom: 12px; 
+  }
+</style>
+<p> O sistema foi estruturado seguindo o padrão MVC (Model–View–Controller), com uma camada adicional chamada Repository, para organizar melhor o código e facilitar manutenção e expansão.</p>
+    <ol>
+  <li>Gerenciamento de Clientes:
+Permite cadastrar, editar, listar, buscar e excluir clientes. Usa ClientesModel (dados), ClientesRepository (armazenamento) e ClientesController (lógica), com interface via TelaClientes.</li>
+  <li>Gerenciamento de Agendamentos:
+Permite registrar, editar, consultar e excluir agendamentos. Usa AgendamentoModel, AgendamentoRepository e AgendamentoController, com interface via TelaAgendamentos.</li>
+  <li>Controller (Controle):
+Contém a lógica do sistema. Recebe e valida dados das telas e repassa aos repositórios.</li>
+  <li>View (Visualização):
+Inclui as telas (TelaInicial, TelaClientes, TelaAgendamentos) que apresentam menus e recebem interações do usuário.</li>
+  <li>Repository (Repositório):
+Armazena e gerencia os dados em arquivos de texto, funcionando como um banco de dados simples.</li>
+</ol>
+</div>
+
+</body>
+</html>

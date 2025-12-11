@@ -20,10 +20,10 @@ Relatório de Desenvolvimento do programa **Vitae Agenda** (Sistema de Gerenciam
 <div align="center">
     <table width="100%">
         <tr>
-            <td align="center"><a href="#"><img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="100px"><br /><sub><b>Guilherme Montenegro</b></sub></a><br/></td>
-            <td align="center"><a href="#"><img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="100px"><br /><sub><b>Severino João</b></sub></a><br/></td>
+            <td align="center"><a href="https://github.com/guimontenegro07"><img src="https://avatars.githubusercontent.com/u/212376548?v=4" width="100px"><br /><sub><b>Guilherme Montenegro</b></sub></a><br/></td>
+            <td align="center"><a href="https://github.com/juniorcruz7"><img src="https://avatars.githubusercontent.com/u/224153797?v=4" width="100px"><br /><sub><b>Severino João</b></sub></a><br/></td>
             <td align="center"><a href="#"><img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="100px"><br /><sub><b>Emanuel Terto</b></sub></a><br/></td>
-            <td align="center"><a href="#"><img src="https://avatars.githubusercontent.com/u/9919?s=200&v=4" width="100px"><br /><sub><b>João Vitor Baracho</b></sub></a><br/></td>
+            <td align="center"><a href="https://github.com/vitorlins0"><img src="https://avatars.githubusercontent.com/u/224650528?s=400&u=2f8410fff56376138168b428f32bc664d3b4963d&v=4" width="100px"><br /><sub><b>João Vitor Baracho</b></sub></a><br/></td>
         </tr>
     </table>
 </div>
@@ -42,7 +42,6 @@ O sistema simula um pequeno banco de dados local através de arquivos de texto, 
 
 ```
 vitae-agenda/
-├── build/ # Diretório de artefatos de compilação (CMake)
 ├── docs/ # Documentação do projeto (HTML/CSS)
 ├── include/ # Declarações das classes (Headers)
 │ ├── controller/ # Lógica de negócio e controle de fluxo

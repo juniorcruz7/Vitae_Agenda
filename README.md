@@ -1,4 +1,4 @@
-# vitae-agenda
+# Vitae Agenda
 
 Relatório de Desenvolvimento do programa **Vitae Agenda** (Sistema de Gerenciamento de Agendamentos), feito para a cadeira de Estrutura de Dados Orientada a Objetos do curso de Sistemas de Informação da UFPE.
 
